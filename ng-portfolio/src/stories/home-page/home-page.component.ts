@@ -5,10 +5,10 @@ import { HeaderComponent } from '../header/header.component';
 import type { User } from '../user';
 
 @Component({
-  selector: 'portfolio-home-page',
+  selector: 'app-portfolio-home-page',
   standalone: true,
   imports: [CommonModule, HeaderComponent],
-  templateUrl:'./home-page.component.html',
+  templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss'],
 })
 export class HomePageComponent {

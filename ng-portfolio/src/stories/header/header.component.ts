@@ -4,9 +4,9 @@ import type { User } from '../user';
 import { ButtonComponent } from '../button/button.component';
 
 @Component({
-  selector: 'portfolio-header',
+  selector: 'app-portfolio-header',
   standalone: true,
-  imports: [CommonModule,ButtonComponent],
+  imports: [CommonModule, ButtonComponent],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
@@ -15,11 +15,11 @@ export class HeaderComponent {
   user: User | null = null;
 
   @Output()
-  onLogin = new EventEmitter<Event>();
+  uponLogin = new EventEmitter<Event>();
 
   @Output()
-  onLogout = new EventEmitter<Event>();
+  uponLogout = new EventEmitter<Event>();
 
   @Output()
-  onCreateAccount = new EventEmitter<Event>();
+  uponCreateAccount = new EventEmitter<Event>();
 }

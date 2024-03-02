@@ -3,12 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from '../stories/home-page/home-page.component';
 import { AboutPageComponent } from '../stories/about-page/about-page.component';
 
-export const routes: Routes = [{path:'',component:HomePageComponent},
-{path:'home',component:HomePageComponent},
-{path:'about',component:AboutPageComponent}];
+export const routes: Routes = [
+  { path: '', component: HomePageComponent },
+  { path: 'home', component: HomePageComponent },
+  { path: 'about', component: AboutPageComponent },
+];
 
 @NgModule({
-    imports:[RouterModule.forChild(routes)],
-    exports:[RouterModule]
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule],
 })
-export class AppRoutes{}
+export class AppRoutes {}

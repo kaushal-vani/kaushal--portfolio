@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'portfolio-button',
+  selector: 'app-portfolio-button',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './button.component.html',
@@ -39,10 +39,12 @@ export class ButtonComponent {
    * Optional click handler
    */
   @Output()
-  onClick = new EventEmitter<Event>();
+  buttonClick = new EventEmitter<Event>();
 
   public get classes(): string[] {
-    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+    const mode = this.primary
+      ? 'storybook-button--primary'
+      : 'storybook-button--secondary';
 
     return ['storybook-button', `storybook-button--${this.size}`, mode];
   }
