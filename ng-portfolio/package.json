@@ -12,7 +12,7 @@
     "storybook": "ng run ng-portfolio:storybook",
     "build-storybook": "ng run ng-portfolio:build-storybook",
     "lint": "ng lint",
-    "prettier": "npx prettier --write"
+    "prettier": "npx prettier --write ."
   },
   "private": true,
   "dependencies": {
