@@ -1,14 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
-import { ButtonComponent } from './button.component';
-import type { User } from './user';
-
-@Component({
-  selector: 'storybook-header',
-  standalone: true,
-  imports: [CommonModule, ButtonComponent],
-  template: `<header>
+<header>
     <div class="storybook-header">
       <div>
         <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
@@ -35,45 +25,30 @@ import type { User } from './user';
             Welcome, <b>{{ user.name }}</b
             >!
           </span>
-          <storybook-button
+          <portfolio-button
             *ngIf="user"
             size="small"
             (onClick)="onLogout.emit($event)"
             label="Log out"
-          ></storybook-button>
+          ></portfolio-button>
         </div>
         <div *ngIf="!user">
-          <storybook-button
+          <portfolio-button
             *ngIf="!user"
             size="small"
             class="margin-left"
             (onClick)="onLogin.emit($event)"
             label="Log in"
-          ></storybook-button>
-          <storybook-button
+          ></portfolio-button>
+          <portfolio-button
             *ngIf="!user"
             size="small"
             [primary]="true"
             class="margin-left"
             (onClick)="onCreateAccount.emit($event)"
             label="Sign up"
-          ></storybook-button>
+          ></portfolio-button>
         </div>
       </div>
     </div>
-  </header>`,
-  styleUrls: ['./header.css'],
-})
-export class HeaderComponent {
-  @Input()
-  user: User | null = null;
-
-  @Output()
-  onLogin = new EventEmitter<Event>();
-
-  @Output()
-  onLogout = new EventEmitter<Event>();
-
-  @Output()
-  onCreateAccount = new EventEmitter<Event>();
-}
+  </header>
