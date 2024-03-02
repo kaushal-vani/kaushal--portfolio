@@ -1,11 +1,12 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-about-page',
+  selector: 'portfolio-about-page',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './about-page.component.html',
-  styleUrl: './about-page.component.scss'
+  styleUrls: ['./about-page.component.scss'],
 })
 export class AboutPageComponent {
 
