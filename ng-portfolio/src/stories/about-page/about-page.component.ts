@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import type { Card } from './about-page.models';
-import { AngularCardMock } from './about-page.mocks';
+import { AboutPageCardMocks } from './about-page.mocks';
 import { CardComponent } from '../card/card.component';
 
 @Component({
@@ -12,5 +11,5 @@ import { CardComponent } from '../card/card.component';
   styleUrls: ['./about-page.component.scss'],
 })
 export class AboutPageComponent {
-  content: Card = AngularCardMock;
+  aboutPageCardMocks = AboutPageCardMocks;
 }

@@ -1,7 +1,11 @@
 <h2>Tech Stack</h2>
-<app-potfolio-card
-  [imageUrl]="content.icon_path"
-  [altText]="content.alt_text"
-  [description]="content.description"
-  [title]="content.title"
-  [meta]="content.meta"></app-potfolio-card>
+<div class="card-container">
+  <div *ngFor="let card of content" class="card-item">
+    <app-portfolio-card
+      [imageUrl]="card.icon_path"
+      [altText]="card.alt_text"
+      [description]="card.description"
+      [title]="card.title"
+      [meta]="card.meta"></app-portfolio-card>
+  </div>
+</div>
