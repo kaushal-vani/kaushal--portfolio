@@ -3,12 +3,12 @@
     "interfaces": [
         {
             "name": "FooterContent",
-            "id": "interface-FooterContent-958fa2d6305491b96db3cf34ce77773ac08c4196fba17ee4a99fa1fb82adbadb4cd4cc66da5468f862214c1f6c5458bae5447f7c429bc4bbe18e7e0be74018a4",
+            "id": "interface-FooterContent-cbcca31a666d004d25777627f3adb8eca1fc74f72c672ab6833f7075da8622c1344698ca9e8192c1580b23fb24f4cdf41c43d5543e3d542a526c03b90745cd15",
             "file": "src/stories/footer/footer.models.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "export interface SocialMedia {\r\n  icon_url: string;\r\n  href_url: string;\r\n  altText: string;\r\n  description?: string;\r\n}\r\nexport interface Logo {\r\n  icon_url: string;\r\n  altText: string;\r\n}\r\nexport interface FooterContent {\r\n  logo: Logo;\r\n  heading: string;\r\n  linkedIn: SocialMedia;\r\n  gitHub: SocialMedia;\r\n}\r\n",
+            "sourceCode": "export interface SocialMedia {\r\n  icon_url: string;\r\n  href_url: string;\r\n  alt_text: string;\r\n  description?: string;\r\n}\r\nexport interface Logo {\r\n  icon_url: string;\r\n  alt_text: string;\r\n}\r\nexport interface FooterContent {\r\n  logo: Logo;\r\n  heading: string;\r\n  linkedIn: SocialMedia;\r\n  gitHub: SocialMedia;\r\n}\r\n",
             "properties": [
                 {
                     "name": "gitHub",
@@ -53,16 +53,58 @@
             "extends": []
         },
         {
+            "name": "HeaderContent",
+            "id": "interface-HeaderContent-956882f74a2bdf34852f26c1c1a3a8dee600d750ec36187d7a4c1a05453789495e31c6f3457fbfb110a3f8ae26d7e21fd98f02d42ed3ef34f0d018ab860ed738",
+            "file": "src/stories/header/header.models.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface Logo {\r\n  icon_url: string;\r\n  alt_text: string;\r\n}\r\n\r\nexport interface HeaderContent {\r\n  heading: string;\r\n  logo: Logo;\r\n  chatBot: Logo;\r\n}\r\n",
+            "properties": [
+                {
+                    "name": "chatBot",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Logo",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                },
+                {
+                    "name": "heading",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 7
+                },
+                {
+                    "name": "logo",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Logo",
+                    "optional": false,
+                    "description": "",
+                    "line": 8
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 171,
+            "methods": [],
+            "extends": []
+        },
+        {
             "name": "Logo",
-            "id": "interface-Logo-958fa2d6305491b96db3cf34ce77773ac08c4196fba17ee4a99fa1fb82adbadb4cd4cc66da5468f862214c1f6c5458bae5447f7c429bc4bbe18e7e0be74018a4",
+            "id": "interface-Logo-cbcca31a666d004d25777627f3adb8eca1fc74f72c672ab6833f7075da8622c1344698ca9e8192c1580b23fb24f4cdf41c43d5543e3d542a526c03b90745cd15",
             "file": "src/stories/footer/footer.models.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "export interface SocialMedia {\r\n  icon_url: string;\r\n  href_url: string;\r\n  altText: string;\r\n  description?: string;\r\n}\r\nexport interface Logo {\r\n  icon_url: string;\r\n  altText: string;\r\n}\r\nexport interface FooterContent {\r\n  logo: Logo;\r\n  heading: string;\r\n  linkedIn: SocialMedia;\r\n  gitHub: SocialMedia;\r\n}\r\n",
+            "sourceCode": "export interface SocialMedia {\r\n  icon_url: string;\r\n  href_url: string;\r\n  alt_text: string;\r\n  description?: string;\r\n}\r\nexport interface Logo {\r\n  icon_url: string;\r\n  alt_text: string;\r\n}\r\nexport interface FooterContent {\r\n  logo: Logo;\r\n  heading: string;\r\n  linkedIn: SocialMedia;\r\n  gitHub: SocialMedia;\r\n}\r\n",
             "properties": [
                 {
-                    "name": "altText",
+                    "name": "alt_text",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "string",
@@ -86,16 +128,52 @@
             "extends": []
         },
         {
+            "name": "Logo",
+            "id": "interface-Logo-956882f74a2bdf34852f26c1c1a3a8dee600d750ec36187d7a4c1a05453789495e31c6f3457fbfb110a3f8ae26d7e21fd98f02d42ed3ef34f0d018ab860ed738-1",
+            "file": "src/stories/header/header.models.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface Logo {\r\n  icon_url: string;\r\n  alt_text: string;\r\n}\r\n\r\nexport interface HeaderContent {\r\n  heading: string;\r\n  logo: Logo;\r\n  chatBot: Logo;\r\n}\r\n",
+            "properties": [
+                {
+                    "name": "alt_text",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                },
+                {
+                    "name": "icon_url",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 171,
+            "methods": [],
+            "extends": [],
+            "isDuplicate": true,
+            "duplicateId": 1,
+            "duplicateName": "Logo-1"
+        },
+        {
             "name": "SocialMedia",
-            "id": "interface-SocialMedia-958fa2d6305491b96db3cf34ce77773ac08c4196fba17ee4a99fa1fb82adbadb4cd4cc66da5468f862214c1f6c5458bae5447f7c429bc4bbe18e7e0be74018a4",
+            "id": "interface-SocialMedia-cbcca31a666d004d25777627f3adb8eca1fc74f72c672ab6833f7075da8622c1344698ca9e8192c1580b23fb24f4cdf41c43d5543e3d542a526c03b90745cd15",
             "file": "src/stories/footer/footer.models.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "export interface SocialMedia {\r\n  icon_url: string;\r\n  href_url: string;\r\n  altText: string;\r\n  description?: string;\r\n}\r\nexport interface Logo {\r\n  icon_url: string;\r\n  altText: string;\r\n}\r\nexport interface FooterContent {\r\n  logo: Logo;\r\n  heading: string;\r\n  linkedIn: SocialMedia;\r\n  gitHub: SocialMedia;\r\n}\r\n",
+            "sourceCode": "export interface SocialMedia {\r\n  icon_url: string;\r\n  href_url: string;\r\n  alt_text: string;\r\n  description?: string;\r\n}\r\nexport interface Logo {\r\n  icon_url: string;\r\n  alt_text: string;\r\n}\r\nexport interface FooterContent {\r\n  logo: Logo;\r\n  heading: string;\r\n  linkedIn: SocialMedia;\r\n  gitHub: SocialMedia;\r\n}\r\n",
             "properties": [
                 {
-                    "name": "altText",
+                    "name": "alt_text",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "string",
@@ -169,7 +247,7 @@
     "components": [
         {
             "name": "AboutPageComponent",
-            "id": "component-AboutPageComponent-31b2192cf56efbd42d1b38ffb38cb16cb5086cd140df2b83dd28740b1c1cd306f184a97a47401dd90fdb896617e1837b9c8c33376295902ceb8eaa1ee3c62dd2",
+            "id": "component-AboutPageComponent-6a907735de003fdc477f247698ba8460619079434b2f060a63e0e910e713bbf062b5d5674bcc7ad8ed8712f4d6851f327de74c6223ecb3c0592232d0117544ac",
             "file": "src/stories/about-page/about-page.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -199,16 +277,12 @@
                 {
                     "name": "CommonModule",
                     "type": "module"
-                },
-                {
-                    "name": "CardComponent",
-                    "type": "component"
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component } from '@angular/core';\r\nimport { CardComponent } from '../card/card.component';\r\n\r\n@Component({\r\n  selector: 'app-portfolio-about-page',\r\n  standalone: true,\r\n  templateUrl: './about-page.component.html',\r\n  styleUrls: ['./about-page.component.scss'],\r\n  imports: [CommonModule, CardComponent],\r\n})\r\nexport class AboutPageComponent {}\r\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-portfolio-about-page',\r\n  standalone: true,\r\n  imports: [CommonModule],\r\n  templateUrl: './about-page.component.html',\r\n  styleUrls: ['./about-page.component.scss'],\r\n})\r\nexport class AboutPageComponent {}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -218,11 +292,11 @@
             ],
             "stylesData": "",
             "extends": [],
-            "templateData": "<app-potfolio-card></app-potfolio-card>\n"
+            "templateData": "<h2>Project Title</h2>\r\n\r\n<h3>Overview</h3>\r\n<p>\r\n  [Provide a brief overview of the project, describing its purpose, goals, and\r\n  significance. Highlight any unique aspects that make it stand out.]\r\n</p>\r\n"
         },
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-48b2f6cc786d8127c1d14a4b09a8614f96c47eb0e6fa35ad558479420cd25bc7c892f67011390c3e35fa0ddfe4c5c548c1ea241428101317cb6dd128deab15dc",
+            "id": "component-AppComponent-83ff1574a7905013e1f5feb9791bfa92c452f3446ef6b176050d381c1cdd56a11da1aa205ff5c52c6cce23449830967152c7576c98a8482fb7f6c2f196371a4d",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -248,7 +322,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 22
+                    "line": 14
                 }
             ],
             "methodsClass": [],
@@ -266,22 +340,14 @@
                     "type": "component"
                 },
                 {
-                    "name": "HomePageComponent",
-                    "type": "component"
-                },
-                {
                     "name": "FooterComponent",
-                    "type": "component"
-                },
-                {
-                    "name": "CardComponent",
                     "type": "component"
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\r\nimport { RouterOutlet } from '@angular/router';\r\nimport { HeaderComponent } from '../stories/header/header.component';\r\nimport { HomePageComponent } from '../stories/home-page/home-page.component';\r\nimport { FooterComponent } from '../stories/footer/footer.component';\r\nimport { CardComponent } from '../stories/card/card.component';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  standalone: true,\r\n  templateUrl: './app.component.html',\r\n  styleUrl: './app.component.scss',\r\n  imports: [\r\n    RouterOutlet,\r\n    HeaderComponent,\r\n    HomePageComponent,\r\n    FooterComponent,\r\n    CardComponent,\r\n  ],\r\n})\r\nexport class AppComponent {\r\n  title = 'ng-portfolio';\r\n}\r\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport { RouterOutlet } from '@angular/router';\r\nimport { HeaderComponent } from '../stories/header/header.component';\r\nimport { FooterComponent } from '../stories/footer/footer.component';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  standalone: true,\r\n  templateUrl: './app.component.html',\r\n  styleUrl: './app.component.scss',\r\n  imports: [RouterOutlet, HeaderComponent, FooterComponent],\r\n})\r\nexport class AppComponent {\r\n  title = 'ng-portfolio';\r\n}\r\n",
             "styleUrl": "./app.component.scss",
             "assetsDirs": [],
             "styleUrlsData": "",
@@ -465,7 +531,7 @@
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<div class=\"card mb-3\" style=\"max-width: 540px\">\r\n  <div class=\"row g-0\">\r\n    <div class=\"col-md-4\">\r\n      <img src=\"...\" class=\"img-fluid rounded-start\" alt=\"...\" />\r\n    </div>\r\n    <div class=\"col-md-8\">\r\n      <div class=\"card-body\">\r\n        <h5 class=\"card-title\">Card title</h5>\r\n        <p class=\"card-text\">\r\n          This is a wider card with supporting text below as a natural lead-in\r\n          to additional content. This content is a little bit longer.\r\n        </p>\r\n        <p class=\"card-text\">\r\n          <small class=\"text-body-secondary\">Last updated 3 mins ago</small>\r\n        </p>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+            "templateData": "<p>Card Works !</p>\r\n"
         },
         {
             "name": "FooterComponent",
@@ -514,11 +580,11 @@
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<div class=\"container\">\r\n  <footer\r\n    class=\"d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top\">\r\n    <div class=\"col-md-4 d-flex align-items-center\">\r\n      <a href=\"/\" class=\"mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1\"\r\n        ><img\r\n          [src]=\"content.logo.icon_url\"\r\n          width=\"24\"\r\n          height=\"24\"\r\n          [alt]=\"content.logo.altText\" />\r\n      </a>\r\n      <span class=\"mb-3 mb-md-0 text-muted\">{{ content.heading }}</span>\r\n    </div>\r\n\r\n    <ul class=\"nav col-md-4 justify-content-end list-unstyled d-flex\">\r\n      <li class=\"ms-4\">\r\n        <a class=\"text-muted\" [href]=\"content.linkedIn.href_url\"\r\n          ><img\r\n            width=\"36\"\r\n            height=\"36\"\r\n            [src]=\"content.linkedIn.icon_url\"\r\n            [alt]=\"content.linkedIn.altText\"\r\n        /></a>\r\n      </li>\r\n      <li class=\"ms-4\">\r\n        <a class=\"text-muted\" [href]=\"content.gitHub.href_url\"\r\n          ><img\r\n            width=\"36\"\r\n            height=\"36\"\r\n            [src]=\"content.gitHub.icon_url\"\r\n            [alt]=\"content.gitHub.altText\"\r\n        /></a>\r\n      </li>\r\n    </ul>\r\n  </footer>\r\n</div>\r\n"
+            "templateData": "<div class=\"container\">\r\n  <footer\r\n    class=\"d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top\">\r\n    <div class=\"col-md-4 d-flex align-items-center\">\r\n      <a href=\"/\" class=\"mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1\"\r\n        ><img\r\n          [src]=\"content.logo.icon_url\"\r\n          width=\"24\"\r\n          height=\"24\"\r\n          [alt]=\"content.logo.alt_text\" />\r\n      </a>\r\n      <span class=\"mb-3 mb-md-0 text-muted\">{{ content.heading }}</span>\r\n    </div>\r\n\r\n    <ul class=\"nav col-md-4 justify-content-end list-unstyled d-flex\">\r\n      <li class=\"ms-4\">\r\n        <a class=\"text-muted\" [href]=\"content.linkedIn.href_url\"\r\n          ><img\r\n            width=\"36\"\r\n            height=\"36\"\r\n            [src]=\"content.linkedIn.icon_url\"\r\n            [alt]=\"content.linkedIn.alt_text\"\r\n        /></a>\r\n      </li>\r\n      <li class=\"ms-4\">\r\n        <a class=\"text-muted\" [href]=\"content.gitHub.href_url\"\r\n          ><img\r\n            width=\"36\"\r\n            height=\"36\"\r\n            [src]=\"content.gitHub.icon_url\"\r\n            [alt]=\"content.gitHub.alt_text\"\r\n        /></a>\r\n      </li>\r\n    </ul>\r\n  </footer>\r\n</div>\r\n"
         },
         {
             "name": "HeaderComponent",
-            "id": "component-HeaderComponent-8594b651f53dfc85b8774bd1268a84639c40278ce00296d59ebd32ef00bf3abb4364a16e8cb30295ca6e812ee0c81aa4343f7fecbd60f0c981368621ef8133da",
+            "id": "component-HeaderComponent-08d5003867ac1fe79ac5ad75df3d9ce23d2624dbd096592ed1b76ff49b7468f045e123ab9e5a518ec33ca8abe4256f6b83be0f96c8e83d0c2964f2d1d51f3853",
             "file": "src/stories/header/header.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -535,44 +601,20 @@
             ],
             "viewProviders": [],
             "hostDirectives": [],
-            "inputsClass": [
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
                 {
-                    "name": "user",
-                    "defaultValue": "null",
+                    "name": "content",
+                    "defaultValue": "HeaderContentMocks",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 15,
-                    "type": "User | null",
-                    "decorators": []
+                    "type": "HeaderContent",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
                 }
             ],
-            "outputsClass": [
-                {
-                    "name": "uponCreateAccount",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 24,
-                    "type": "EventEmitter"
-                },
-                {
-                    "name": "uponLogin",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 18,
-                    "type": "EventEmitter"
-                },
-                {
-                    "name": "uponLogout",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 21,
-                    "type": "EventEmitter"
-                }
-            ],
-            "propertiesClass": [],
             "methodsClass": [],
             "deprecated": false,
             "deprecationMessage": "",
@@ -583,16 +625,12 @@
                 {
                     "name": "CommonModule",
                     "type": "module"
-                },
-                {
-                    "name": "ButtonComponent",
-                    "type": "component"
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport type { User } from '../user';\r\nimport { ButtonComponent } from '../button/button.component';\r\n\r\n@Component({\r\n  selector: 'app-portfolio-header',\r\n  standalone: true,\r\n  imports: [CommonModule, ButtonComponent],\r\n  templateUrl: './header.component.html',\r\n  styleUrls: ['./header.component.scss'],\r\n})\r\nexport class HeaderComponent {\r\n  @Input()\r\n  user: User | null = null;\r\n\r\n  @Output()\r\n  uponLogin = new EventEmitter<Event>();\r\n\r\n  @Output()\r\n  uponLogout = new EventEmitter<Event>();\r\n\r\n  @Output()\r\n  uponCreateAccount = new EventEmitter<Event>();\r\n}\r\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport type { HeaderContent } from './header.models';\r\nimport { HeaderContentMocks } from './header.mocks';\r\n\r\n@Component({\r\n  selector: 'app-portfolio-header',\r\n  standalone: true,\r\n  imports: [CommonModule],\r\n  templateUrl: './header.component.html',\r\n  styleUrls: ['./header.component.scss'],\r\n})\r\nexport class HeaderComponent {\r\n  content: HeaderContent = HeaderContentMocks;\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -602,7 +640,7 @@
             ],
             "stylesData": "",
             "extends": [],
-            "templateData": "<header>\r\n  <div class=\"storybook-header\">\r\n    <div>\r\n      <img\r\n        src=\"https://img.icons8.com/ios/50/program.png\"\r\n        width=\"48\"\r\n        height=\"48\"\r\n        alt=\"\" />\r\n      <h1>Kaushal's Portfolio</h1>\r\n    </div>\r\n    <div>\r\n      <img\r\n        src=\"https://www.svgrepo.com/show/339963/chat-bot.svg\"\r\n        width=\"36\"\r\n        height=\"36\"\r\n        alt=\"\" />\r\n    </div>\r\n  </div>\r\n</header>\r\n"
+            "templateData": "<header>\r\n  <div class=\"storybook-header\">\r\n    <div>\r\n      <img\r\n        [src]=\"content.logo.icon_url\"\r\n        width=\"42\"\r\n        height=\"42\"\r\n        [alt]=\"content.logo.alt_text\" />\r\n      <h1>{{ content.heading }}</h1>\r\n    </div>\r\n    <div>\r\n      <img\r\n        [src]=\"content.chatBot.icon_url\"\r\n        width=\"36\"\r\n        height=\"36\"\r\n        [alt]=\"content.chatBot.alt_text\" />\r\n    </div>\r\n  </div>\r\n</header>\r\n"
         },
         {
             "name": "HomePageComponent",
@@ -751,6 +789,16 @@
                 "defaultValue": "{\r\n  providers: [provideRouter(routes)],\r\n}"
             },
             {
+                "name": "ChatBotMocks",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/header/header.mocks.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Logo",
+                "defaultValue": "{\r\n  icon_url: 'https://www.svgrepo.com/show/339963/chat-bot.svg',\r\n  alt_text: 'PortFolio Logo',\r\n}"
+            },
+            {
                 "name": "Content",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -775,6 +823,16 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/footer/footer.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{}"
+            },
+            {
+                "name": "Content",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/header/header.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -798,7 +856,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "SocialMedia",
-                "defaultValue": "{\r\n  icon_url: 'https://img.icons8.com/fluency/48/github.png',\r\n  href_url: 'https://github.com/kaushal-vani',\r\n  altText: 'GitHub',\r\n  description: 'Professional network',\r\n}"
+                "defaultValue": "{\r\n  icon_url: 'https://img.icons8.com/fluency/48/github.png',\r\n  href_url: 'https://github.com/kaushal-vani',\r\n  alt_text: 'GitHub',\r\n  description: 'Professional network',\r\n}"
+            },
+            {
+                "name": "HeaderContentMocks",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/header/header.mocks.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "HeaderContent",
+                "defaultValue": "{\r\n  heading: \"Kaushal's Portfolio\",\r\n  logo: LogoMocks,\r\n  chatBot: ChatBotMocks,\r\n}"
             },
             {
                 "name": "Large",
@@ -818,17 +886,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "SocialMedia",
-                "defaultValue": "{\r\n  icon_url: 'https://img.icons8.com/fluency/48/linkedin.png',\r\n  href_url: 'https://www.linkedin.com/in/kaushal-vani/',\r\n  altText: 'LinkedIn',\r\n  description: 'Professional network',\r\n}"
-            },
-            {
-                "name": "LoggedIn",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/header/header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n  args: {\n    user: {\n      name: 'Jane Doe',\n    },\n  },\n}"
+                "defaultValue": "{\r\n  icon_url: 'https://img.icons8.com/fluency/48/linkedin.png',\r\n  href_url: 'https://www.linkedin.com/in/kaushal-vani/',\r\n  alt_text: 'LinkedIn',\r\n  description: 'Professional network',\r\n}"
             },
             {
                 "name": "LoggedIn",
@@ -839,16 +897,6 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    const loginButton = canvas.getByRole('button', { name: /Log in/i });\n    await expect(loginButton).toBeInTheDocument();\n    await userEvent.click(loginButton);\n    await expect(loginButton).not.toBeInTheDocument();\n\n    const logoutButton = canvas.getByRole('button', { name: /Log out/i });\n    await expect(logoutButton).toBeInTheDocument();\n  },\n}"
-            },
-            {
-                "name": "LoggedOut",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/header/header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{}"
             },
             {
                 "name": "LoggedOut",
@@ -868,7 +916,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Logo",
-                "defaultValue": "{\r\n  icon_url: 'https://img.icons8.com/ios/50/program.png',\r\n  altText: 'PortFolio Logo',\r\n}"
+                "defaultValue": "{\r\n  icon_url: 'https://img.icons8.com/ios/50/program.png',\r\n  alt_text: 'PortFolio Logo',\r\n}"
+            },
+            {
+                "name": "LogoMocks",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/header/header.mocks.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Logo",
+                "defaultValue": "{\r\n  icon_url: 'https://img.icons8.com/ios/50/program.png',\r\n  alt_text: 'PortFolio Logo',\r\n}"
             },
             {
                 "name": "meta",
@@ -878,7 +936,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<AboutPageComponent>",
-                "defaultValue": "{\r\n  title: 'Example/About-Page',\r\n  component: AboutPageComponent,\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  title: 'Example/About-Page',\r\n  component: AboutPageComponent,\r\n  tags: ['autodocs'],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/card/card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<CardComponent>",
+                "defaultValue": "{\r\n  title: 'Example/Card',\r\n  component: CardComponent,\r\n  tags: ['autodocs'],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
             },
             {
                 "name": "meta",
@@ -894,21 +962,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/card/card.stories.ts",
+                "file": "src/stories/footer/footer.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<CardComponent>",
-                "defaultValue": "{\r\n  title: 'Example/Card',\r\n  component: CardComponent,\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
+                "type": "Meta<FooterComponent>",
+                "defaultValue": "{\r\n  title: 'Example/Footer',\r\n  component: FooterComponent,\r\n  tags: ['autodocs'],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
             },
             {
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/footer/footer.stories.ts",
+                "file": "src/stories/home-page/home-page.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<FooterComponent>",
-                "defaultValue": "{\r\n  title: 'Example/Footer',\r\n  component: FooterComponent,\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
+                "type": "Meta<HomePageComponent>",
+                "defaultValue": "{\n  title: 'Example/Page',\n  component: HomePageComponent,\n  tags: ['autodocs'],\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n    layout: 'fullscreen',\n  },\n}"
             },
             {
                 "name": "meta",
@@ -919,16 +987,6 @@
                 "deprecationMessage": "",
                 "type": "Meta<HeaderComponent>",
                 "defaultValue": "{\n  title: 'Example/Header',\n  component: HeaderComponent,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\n  tags: ['autodocs'],\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n    layout: 'fullscreen',\n  },\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/home-page/home-page.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<HomePageComponent>",
-                "defaultValue": "{\n  title: 'Example/Page',\n  component: HomePageComponent,\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n    layout: 'fullscreen',\n  },\n}"
             },
             {
                 "name": "preview",
@@ -988,8 +1046,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<ButtonComponent>",
-                "file": "src/stories/button/button.stories.ts",
+                "rawtype": "StoryObj<CardComponent>",
+                "file": "src/stories/card/card.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -999,8 +1057,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<CardComponent>",
-                "file": "src/stories/card/card.stories.ts",
+                "rawtype": "StoryObj<ButtonComponent>",
+                "file": "src/stories/button/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1021,8 +1079,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<HeaderComponent>",
-                "file": "src/stories/header/header.stories.ts",
+                "rawtype": "StoryObj<HomePageComponent>",
+                "file": "src/stories/home-page/home-page.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1032,8 +1090,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<HomePageComponent>",
-                "file": "src/stories/home-page/home-page.stories.ts",
+                "rawtype": "StoryObj<HeaderComponent>",
+                "file": "src/stories/header/header.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1052,6 +1110,38 @@
                     "deprecationMessage": "",
                     "type": "ApplicationConfig",
                     "defaultValue": "{\r\n  providers: [provideRouter(routes)],\r\n}"
+                }
+            ],
+            "src/stories/header/header.mocks.ts": [
+                {
+                    "name": "ChatBotMocks",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/header/header.mocks.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Logo",
+                    "defaultValue": "{\r\n  icon_url: 'https://www.svgrepo.com/show/339963/chat-bot.svg',\r\n  alt_text: 'PortFolio Logo',\r\n}"
+                },
+                {
+                    "name": "HeaderContentMocks",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/header/header.mocks.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "HeaderContent",
+                    "defaultValue": "{\r\n  heading: \"Kaushal's Portfolio\",\r\n  logo: LogoMocks,\r\n  chatBot: ChatBotMocks,\r\n}"
+                },
+                {
+                    "name": "LogoMocks",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/header/header.mocks.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Logo",
+                    "defaultValue": "{\r\n  icon_url: 'https://img.icons8.com/ios/50/program.png',\r\n  alt_text: 'PortFolio Logo',\r\n}"
                 }
             ],
             "src/stories/about-page/about-page.stories.ts": [
@@ -1073,7 +1163,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<AboutPageComponent>",
-                    "defaultValue": "{\r\n  title: 'Example/About-Page',\r\n  component: AboutPageComponent,\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  title: 'Example/About-Page',\r\n  component: AboutPageComponent,\r\n  tags: ['autodocs'],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
                 }
             ],
             "src/stories/card/card.stories.ts": [
@@ -1095,7 +1185,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<CardComponent>",
-                    "defaultValue": "{\r\n  title: 'Example/Card',\r\n  component: CardComponent,\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  title: 'Example/Card',\r\n  component: CardComponent,\r\n  tags: ['autodocs'],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
                 }
             ],
             "src/stories/footer/footer.stories.ts": [
@@ -1117,7 +1207,29 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<FooterComponent>",
-                    "defaultValue": "{\r\n  title: 'Example/Footer',\r\n  component: FooterComponent,\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  title: 'Example/Footer',\r\n  component: FooterComponent,\r\n  tags: ['autodocs'],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
+                }
+            ],
+            "src/stories/header/header.stories.ts": [
+                {
+                    "name": "Content",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/header/header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/header/header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<HeaderComponent>",
+                    "defaultValue": "{\n  title: 'Example/Header',\n  component: HeaderComponent,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\n  tags: ['autodocs'],\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n    layout: 'fullscreen',\n  },\n}"
                 }
             ],
             "src/stories/footer/footer.mocks.ts": [
@@ -1139,7 +1251,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "SocialMedia",
-                    "defaultValue": "{\r\n  icon_url: 'https://img.icons8.com/fluency/48/github.png',\r\n  href_url: 'https://github.com/kaushal-vani',\r\n  altText: 'GitHub',\r\n  description: 'Professional network',\r\n}"
+                    "defaultValue": "{\r\n  icon_url: 'https://img.icons8.com/fluency/48/github.png',\r\n  href_url: 'https://github.com/kaushal-vani',\r\n  alt_text: 'GitHub',\r\n  description: 'Professional network',\r\n}"
                 },
                 {
                     "name": "LinkedInMocks",
@@ -1149,7 +1261,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "SocialMedia",
-                    "defaultValue": "{\r\n  icon_url: 'https://img.icons8.com/fluency/48/linkedin.png',\r\n  href_url: 'https://www.linkedin.com/in/kaushal-vani/',\r\n  altText: 'LinkedIn',\r\n  description: 'Professional network',\r\n}"
+                    "defaultValue": "{\r\n  icon_url: 'https://img.icons8.com/fluency/48/linkedin.png',\r\n  href_url: 'https://www.linkedin.com/in/kaushal-vani/',\r\n  alt_text: 'LinkedIn',\r\n  description: 'Professional network',\r\n}"
                 },
                 {
                     "name": "LogoMocks",
@@ -1159,7 +1271,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Logo",
-                    "defaultValue": "{\r\n  icon_url: 'https://img.icons8.com/ios/50/program.png',\r\n  altText: 'PortFolio Logo',\r\n}"
+                    "defaultValue": "{\r\n  icon_url: 'https://img.icons8.com/ios/50/program.png',\r\n  alt_text: 'PortFolio Logo',\r\n}"
                 }
             ],
             "src/stories/button/button.stories.ts": [
@@ -1214,38 +1326,6 @@
                     "defaultValue": "{\n  args: {\n    size: 'small',\n    label: 'Button',\n  },\n}"
                 }
             ],
-            "src/stories/header/header.stories.ts": [
-                {
-                    "name": "LoggedIn",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/header/header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  args: {\n    user: {\n      name: 'Jane Doe',\n    },\n  },\n}"
-                },
-                {
-                    "name": "LoggedOut",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/header/header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{}"
-                },
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/header/header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<HeaderComponent>",
-                    "defaultValue": "{\n  title: 'Example/Header',\n  component: HeaderComponent,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\n  tags: ['autodocs'],\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n    layout: 'fullscreen',\n  },\n}"
-                }
-            ],
             "src/stories/home-page/home-page.stories.ts": [
                 {
                     "name": "LoggedIn",
@@ -1275,7 +1355,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<HomePageComponent>",
-                    "defaultValue": "{\n  title: 'Example/Page',\n  component: HomePageComponent,\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n    layout: 'fullscreen',\n  },\n}"
+                    "defaultValue": "{\n  title: 'Example/Page',\n  component: HomePageComponent,\n  tags: ['autodocs'],\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n    layout: 'fullscreen',\n  },\n}"
                 }
             ],
             ".storybook/preview.ts": [
@@ -1307,19 +1387,6 @@
                     "kind": 183
                 }
             ],
-            "src/stories/button/button.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<ButtonComponent>",
-                    "file": "src/stories/button/button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
             "src/stories/card/card.stories.ts": [
                 {
                     "name": "Story",
@@ -1327,6 +1394,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<CardComponent>",
                     "file": "src/stories/card/card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "src/stories/button/button.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<ButtonComponent>",
+                    "file": "src/stories/button/button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -1346,19 +1426,6 @@
                     "kind": 183
                 }
             ],
-            "src/stories/header/header.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<HeaderComponent>",
-                    "file": "src/stories/header/header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
             "src/stories/home-page/home-page.stories.ts": [
                 {
                     "name": "Story",
@@ -1366,6 +1433,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<HomePageComponent>",
                     "file": "src/stories/home-page/home-page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "src/stories/header/header.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<HeaderComponent>",
+                    "file": "src/stories/header/header.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -1627,25 +1707,63 @@
                 "linktype": "component",
                 "name": "HeaderComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/5",
+                "coverageCount": "0/2",
                 "status": "low"
             },
             {
-                "filePath": "src/stories/header/header.stories.ts",
+                "filePath": "src/stories/header/header.mocks.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "LoggedIn",
+                "name": "ChatBotMocks",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
             },
             {
+                "filePath": "src/stories/header/header.mocks.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "HeaderContentMocks",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/header/header.mocks.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LogoMocks",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/header/header.models.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "HeaderContent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/header/header.models.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "Logo",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
                 "filePath": "src/stories/header/header.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "LoggedOut",
+                "name": "Content",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

@@ -16,12 +16,4 @@ const meta: Meta<HeaderComponent> = {
 export default meta;
 type Story = StoryObj<HeaderComponent>;
 
-export const LoggedIn: Story = {
-  args: {
-    user: {
-      name: 'Jane Doe',
-    },
-  },
-};
-
-export const LoggedOut: Story = {};
+export const Content: Story = {};
