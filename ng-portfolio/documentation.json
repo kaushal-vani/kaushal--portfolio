@@ -34,14 +34,14 @@
     "components": [
         {
             "name": "AboutPageComponent",
-            "id": "component-AboutPageComponent-1a9e7d046c9dc8095d97dd159d9fcf80ebb9316f01009b3472d2b7c141ab175235098855e0d040f57a09292951c0ffb7a860b9796833bdaf1a3197398a121017",
+            "id": "component-AboutPageComponent-6a907735de003fdc477f247698ba8460619079434b2f060a63e0e910e713bbf062b5d5674bcc7ad8ed8712f4d6851f327de74c6223ecb3c0592232d0117544ac",
             "file": "src/stories/about-page/about-page.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "portfolio-about-page",
+            "selector": "app-portfolio-about-page",
             "styleUrls": [
                 "./about-page.component.scss"
             ],
@@ -69,21 +69,21 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'portfolio-about-page',\r\n  standalone: true,\r\n  imports: [CommonModule],\r\n  templateUrl: './about-page.component.html',\r\n  styleUrls: ['./about-page.component.scss'],\r\n})\r\nexport class AboutPageComponent {\r\n\r\n}\r\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-portfolio-about-page',\r\n  standalone: true,\r\n  imports: [CommonModule],\r\n  templateUrl: './about-page.component.html',\r\n  styleUrls: ['./about-page.component.scss'],\r\n})\r\nexport class AboutPageComponent {}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "",
+                    "data": "body {\r\n    font-family: Arial, sans-serif;\r\n    line-height: 1.6;\r\n    margin: 20px;\r\n  }\r\n  h2,\r\n  h3 {\r\n    color: #3498db;\r\n  }\r\n  ul {\r\n    list-style-type: none;\r\n    padding: 0;\r\n  }\r\n  li {\r\n    margin-bottom: 10px;\r\n  }",
                     "styleUrl": "./about-page.component.scss"
                 }
             ],
             "stylesData": "",
             "extends": [],
-            "templateData": "<p>about-page works!</p>\r\n"
+            "templateData": "<h2>Project Title</h2>\n\n<h3>Overview</h3>\n<p>\n  [Provide a brief overview of the project, describing its purpose, goals, and\n  significance. Highlight any unique aspects that make it stand out.]\n</p>\n"
         },
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-ed0a91554da78fbbb46738b78ae4f8defd54f81c45ff4ebbbfe5190d67688e74a31ba9266a09953d721b1cd0468f76fe05183ee2d1ae4ff55ce569acdc3eb0ec",
+            "id": "component-AppComponent-2cf517da8e06ad545d17f2b4718ec43f4cd003bac4e4b0d6c8430da6cf9d9c30452de3b94224b240e3c4d5d2c991b558a3d922bd66f11c04d74c794e20429ef1",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -109,7 +109,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 15
+                    "line": 14
                 }
             ],
             "methodsClass": [],
@@ -134,24 +134,24 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\r\nimport { RouterOutlet } from '@angular/router';\r\nimport { HeaderComponent } from \"../stories/header/header.component\";\r\nimport { HomePageComponent } from '../stories/home-page/home-page.component';\r\n\r\n\r\n@Component({\r\n    selector: 'app-root',\r\n    standalone: true,\r\n    templateUrl: './app.component.html',\r\n    styleUrl: './app.component.scss',\r\n    imports: [RouterOutlet, HeaderComponent,HomePageComponent]\r\n})\r\nexport class AppComponent {\r\n  title = 'ng-portfolio';\r\n}\r\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport { RouterOutlet } from '@angular/router';\r\nimport { HeaderComponent } from '../stories/header/header.component';\r\nimport { HomePageComponent } from '../stories/home-page/home-page.component';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  standalone: true,\r\n  templateUrl: './app.component.html',\r\n  styleUrl: './app.component.scss',\r\n  imports: [RouterOutlet, HeaderComponent, HomePageComponent],\r\n})\r\nexport class AppComponent {\r\n  title = 'ng-portfolio';\r\n}\r\n",
             "styleUrl": "./app.component.scss",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<portfolio-header></portfolio-header>\r\n<portfolio-home-page></portfolio-home-page>"
+            "templateData": "<app-portfolio-header></app-portfolio-header> <router-outlet></router-outlet>\r\n"
         },
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-09f7081e8832b411933cf80fecc85de51c4c1a1d51f28702603011ea5512a83b0445d3c36053ae6c97484452d373943d4ff72093d93d387221ef34821bd3d206",
+            "id": "component-ButtonComponent-9ea5f35db65925c026219e05f24cd29756e084e03147cc60ccc73d0b0e942eae951962368952c67e062f6531cc442db4c7ade5cf7bb0fcc2d4491a446340a6d7",
             "file": "src/stories/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "portfolio-button",
+            "selector": "app-portfolio-button",
             "styleUrls": [
                 "./button.component.scss"
             ],
@@ -179,15 +179,15 @@
                     "deprecationMessage": "",
                     "jsdoctags": [
                         {
-                            "pos": 662,
-                            "end": 675,
+                            "pos": 666,
+                            "end": 679,
                             "flags": 16842752,
                             "modifierFlagsCache": 0,
                             "transformFlags": 0,
                             "kind": 334,
                             "tagName": {
-                                "pos": 663,
-                                "end": 671,
+                                "pos": 667,
+                                "end": 675,
                                 "flags": 16842752,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -228,7 +228,7 @@
             ],
             "outputsClass": [
                 {
-                    "name": "onClick",
+                    "name": "buttonClick",
                     "defaultValue": "new EventEmitter<Event>()",
                     "deprecated": false,
                     "deprecationMessage": "",
@@ -254,7 +254,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'portfolio-button',\n  standalone: true,\n  imports: [CommonModule],\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss'],\n})\nexport class ButtonComponent {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  primary = false;\n\n  /**\n   * What background color to use\n   */\n  @Input()\n  backgroundColor?: string;\n\n  /**\n   * How large should the button be?\n   */\n  @Input()\n  size: 'small' | 'medium' | 'large' = 'medium';\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Button';\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';\n\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\n  }\n}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'app-portfolio-button',\n  standalone: true,\n  imports: [CommonModule],\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss'],\n})\nexport class ButtonComponent {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  primary = false;\n\n  /**\n   * What background color to use\n   */\n  @Input()\n  backgroundColor?: string;\n\n  /**\n   * How large should the button be?\n   */\n  @Input()\n  size: 'small' | 'medium' | 'large' = 'medium';\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Button';\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  buttonClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.primary\n      ? 'storybook-button--primary'\n      : 'storybook-button--secondary';\n\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -275,18 +275,56 @@
                     }
                 }
             },
-            "templateData": "<button\r\n    type=\"button\"\r\n    (click)=\"onClick.emit($event)\"\r\n    [ngClass]=\"classes\"\r\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  >\r\n    {{ label }}\r\n  </button>"
+            "templateData": "<button\r\n  type=\"button\"\r\n  (click)=\"buttonClick.emit($event)\"\r\n  [ngClass]=\"classes\"\r\n  [ngStyle]=\"{ 'background-color': backgroundColor }\">\r\n  {{ label }}\r\n</button>\r\n"
+        },
+        {
+            "name": "FooterComponent",
+            "id": "component-FooterComponent-c81cf620c9f2c57c0348d66757ab4d3bfdabcea2f9833c3e96b639d3d71d4c3377a27e78b64a04c5b6fbc8320c340a2bd5a10686d04015cb92747b8e35e37817",
+            "file": "src/stories/footer/footer.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-footer",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./footer.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-footer',\r\n  standalone: true,\r\n  imports: [],\r\n  templateUrl: './footer.component.html',\r\n  styleUrl: './footer.component.scss',\r\n})\r\nexport class FooterComponent {}\r\n",
+            "styleUrl": "./footer.component.scss",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<p>footer works!</p>\r\n"
         },
         {
             "name": "HeaderComponent",
-            "id": "component-HeaderComponent-90fc207775a6b6b1196e913591363bbd17ee1d2c735aa7db046e96d544a4ca8abc69c6b6db9f78ea4e49bff11e4e354cd0848acd2ef9f7d733ec3bc96547b95b",
+            "id": "component-HeaderComponent-bd3b39beb4f50e4ce2b712f1db851b819b87f5976933cc3e251a211e11acba12b6eb94a15a28795dd684bb2631604ee1de1b84d6c0e4f5557974074c4388e71b",
             "file": "src/stories/header/header.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "portfolio-header",
+            "selector": "app-portfolio-header",
             "styleUrls": [
                 "./header.component.scss"
             ],
@@ -309,7 +347,7 @@
             ],
             "outputsClass": [
                 {
-                    "name": "onCreateAccount",
+                    "name": "uponCreateAccount",
                     "defaultValue": "new EventEmitter<Event>()",
                     "deprecated": false,
                     "deprecationMessage": "",
@@ -317,7 +355,7 @@
                     "type": "EventEmitter"
                 },
                 {
-                    "name": "onLogin",
+                    "name": "uponLogin",
                     "defaultValue": "new EventEmitter<Event>()",
                     "deprecated": false,
                     "deprecationMessage": "",
@@ -325,7 +363,7 @@
                     "type": "EventEmitter"
                 },
                 {
-                    "name": "onLogout",
+                    "name": "uponLogout",
                     "defaultValue": "new EventEmitter<Event>()",
                     "deprecated": false,
                     "deprecationMessage": "",
@@ -353,7 +391,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport type { User } from '../user';\nimport { ButtonComponent } from '../button/button.component';\n\n@Component({\n  selector: 'portfolio-header',\n  standalone: true,\n  imports: [CommonModule,ButtonComponent],\n  templateUrl: './header.component.html',\n  styleUrls: ['./header.component.scss'],\n})\nexport class HeaderComponent {\n  @Input()\n  user: User | null = null;\n\n  @Output()\n  onLogin = new EventEmitter<Event>();\n\n  @Output()\n  onLogout = new EventEmitter<Event>();\n\n  @Output()\n  onCreateAccount = new EventEmitter<Event>();\n}\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport type { User } from '../user';\nimport { ButtonComponent } from '../button/button.component';\n\n@Component({\n  selector: 'app-portfolio-header',\n  standalone: true,\n  imports: [CommonModule, ButtonComponent],\n  templateUrl: './header.component.html',\n  styleUrls: ['./header.component.scss'],\n})\nexport class HeaderComponent {\n  @Input()\n  user: User | null = null;\n\n  @Output()\n  uponLogin = new EventEmitter<Event>();\n\n  @Output()\n  uponLogout = new EventEmitter<Event>();\n\n  @Output()\n  uponCreateAccount = new EventEmitter<Event>();\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -363,18 +401,18 @@
             ],
             "stylesData": "",
             "extends": [],
-            "templateData": "<header>\r\n    <div class=\"storybook-header\">\r\n      <div>\r\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\r\n          <g fill=\"none\" fillRule=\"evenodd\">\r\n            <path\r\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\r\n              fill=\"#FFF\"\r\n            />\r\n            <path\r\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\r\n              fill=\"#555AB9\"\r\n            />\r\n            <path\r\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\r\n              fill=\"#91BAF8\"\r\n            />\r\n          </g>\r\n        </svg>\r\n        <h1>Acme</h1>\r\n      </div>\r\n      <div>\r\n        <div *ngIf=\"user\">\r\n          <span class=\"welcome\">\r\n            Welcome, <b>{{ user.name }}</b\r\n            >!\r\n          </span>\r\n          <portfolio-button\r\n            *ngIf=\"user\"\r\n            size=\"small\"\r\n            (onClick)=\"onLogout.emit($event)\"\r\n            label=\"Log out\"\r\n          ></portfolio-button>\r\n        </div>\r\n        <div *ngIf=\"!user\">\r\n          <portfolio-button\r\n            *ngIf=\"!user\"\r\n            size=\"small\"\r\n            class=\"margin-left\"\r\n            (onClick)=\"onLogin.emit($event)\"\r\n            label=\"Log in\"\r\n          ></portfolio-button>\r\n          <portfolio-button\r\n            *ngIf=\"!user\"\r\n            size=\"small\"\r\n            [primary]=\"true\"\r\n            class=\"margin-left\"\r\n            (onClick)=\"onCreateAccount.emit($event)\"\r\n            label=\"Sign up\"\r\n          ></portfolio-button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </header>"
+            "templateData": "<header>\r\n  <div class=\"storybook-header\">\r\n    <div>\r\n      <svg\r\n        width=\"32\"\r\n        height=\"32\"\r\n        viewBox=\"0 0 32 32\"\r\n        xmlns=\"http://www.w3.org/2000/svg\">\r\n        <g fill=\"none\" fillRule=\"evenodd\">\r\n          <path\r\n            d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\r\n            fill=\"#FFF\" />\r\n          <path\r\n            d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\r\n            fill=\"#555AB9\" />\r\n          <path\r\n            d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\r\n            fill=\"#91BAF8\" />\r\n        </g>\r\n      </svg>\r\n      <h1>Acme</h1>\r\n    </div>\r\n    <div>\r\n      <div *ngIf=\"user\">\r\n        <span class=\"welcome\">\r\n          Welcome, <b>{{ user.name }}</b\r\n          >!\r\n        </span>\r\n        <app-portfolio-button\r\n          *ngIf=\"user\"\r\n          size=\"small\"\r\n          (onClick)=\"uponLogout.emit($event)\"\r\n          label=\"Log out\"></app-portfolio-button>\r\n      </div>\r\n      <div *ngIf=\"!user\">\r\n        <app-portfolio-button\r\n          *ngIf=\"!user\"\r\n          size=\"small\"\r\n          class=\"margin-left\"\r\n          (onClick)=\"uponLogin.emit($event)\"\r\n          label=\"Log in\"></app-portfolio-button>\r\n        <app-portfolio-button\r\n          *ngIf=\"!user\"\r\n          size=\"small\"\r\n          [primary]=\"true\"\r\n          class=\"margin-left\"\r\n          (onClick)=\"uponCreateAccount.emit($event)\"\r\n          label=\"Sign up\"></app-portfolio-button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</header>\r\n"
         },
         {
             "name": "HomePageComponent",
-            "id": "component-HomePageComponent-6f105fad7ee4b278b5907dedb020c2d334e770c30e5faf95cd51fde64dfabf6634aac17cfe569940eeb1ea40b5e51605feb99abca47906479e03caea0ef8e4ae",
+            "id": "component-HomePageComponent-b95da3026fafa6f9bebb2cafdbc1c3cbc91d468c46716840d173c44539b7811c456299d4fccf8fe2dc4c983861fdf7a4ed9cae03bd48a6f1223fdadda3df6c55",
             "file": "src/stories/home-page/home-page.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "portfolio-home-page",
+            "selector": "app-portfolio-home-page",
             "styleUrls": [
                 "./home-page.component.scss"
             ],
@@ -448,7 +486,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\nimport { HeaderComponent } from '../header/header.component';\nimport type { User } from '../user';\n\n@Component({\n  selector: 'portfolio-home-page',\n  standalone: true,\n  imports: [CommonModule, HeaderComponent],\n  templateUrl:'./home-page.component.html',\n  styleUrls: ['./home-page.component.scss'],\n})\nexport class HomePageComponent {\n  user: User | null = null;\n\n  doLogout() {\n    this.user = null;\n  }\n\n  doLogin() {\n    this.user = { name: 'Jane Doe' };\n  }\n\n  doCreateAccount() {\n    this.user = { name: 'Jane Doe' };\n  }\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\nimport { HeaderComponent } from '../header/header.component';\nimport type { User } from '../user';\n\n@Component({\n  selector: 'app-portfolio-home-page',\n  standalone: true,\n  imports: [CommonModule, HeaderComponent],\n  templateUrl: './home-page.component.html',\n  styleUrls: ['./home-page.component.scss'],\n})\nexport class HomePageComponent {\n  user: User | null = null;\n\n  doLogout() {\n    this.user = null;\n  }\n\n  doLogin() {\n    this.user = { name: 'Jane Doe' };\n  }\n\n  doCreateAccount() {\n    this.user = { name: 'Jane Doe' };\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -458,10 +496,47 @@
             ],
             "stylesData": "",
             "extends": [],
-            "templateData": "<article>\r\n    <section class=\"storybook-page\">\r\n      <h2>Pages in Storybook</h2>\r\n      <p>\r\n        We recommend building UIs with a\r\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\r\n          <strong>component-driven</strong>\r\n        </a>\r\n        process starting with atomic components and ending with pages.\r\n      </p>\r\n      <p>\r\n        Render pages with mock data. This makes it easy to build and review page states without\r\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\r\n        in Storybook:\r\n      </p>\r\n      <ul>\r\n        <li>\r\n          Use a higher-level connected component. Storybook helps you compose such data from the\r\n          \"args\" of child component stories\r\n        </li>\r\n        <li>\r\n          Assemble data in the page component from your services. You can mock these services out\r\n          using Storybook.\r\n        </li>\r\n      </ul>\r\n      <p>\r\n        Get a guided tutorial on component-driven development at\r\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\r\n          Storybook tutorials\r\n        </a>\r\n        . Read more in the\r\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\r\n        .\r\n      </p>\r\n      <div class=\"tip-wrapper\">\r\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\r\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\r\n          <g fill=\"none\" fillRule=\"evenodd\">\r\n            <path\r\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\r\n              id=\"a\"\r\n              fill=\"#999\"\r\n            />\r\n          </g>\r\n        </svg>\r\n        Viewports addon in the toolbar\r\n      </div>\r\n    </section>\r\n  </article>"
+            "templateData": "<article>\r\n  <section class=\"storybook-page\">\r\n    <h2>Pages in Storybook</h2>\r\n    <p>\r\n      We recommend building UIs with a\r\n      <a\r\n        href=\"https://componentdriven.org\"\r\n        target=\"_blank\"\r\n        rel=\"noopener noreferrer\">\r\n        <strong>component-driven</strong>\r\n      </a>\r\n      process starting with atomic components and ending with pages.\r\n    </p>\r\n    <p>\r\n      Render pages with mock data. This makes it easy to build and review page\r\n      states without needing to navigate to them in your app. Here are some\r\n      handy patterns for managing page data in Storybook:\r\n    </p>\r\n    <ul>\r\n      <li>\r\n        Use a higher-level connected component. Storybook helps you compose such\r\n        data from the \"args\" of child component stories\r\n      </li>\r\n      <li>\r\n        Assemble data in the page component from your services. You can mock\r\n        these services out using Storybook.\r\n      </li>\r\n    </ul>\r\n    <p>\r\n      Get a guided tutorial on component-driven development at\r\n      <a\r\n        href=\"https://storybook.js.org/tutorials/\"\r\n        target=\"_blank\"\r\n        rel=\"noopener noreferrer\">\r\n        Storybook tutorials\r\n      </a>\r\n      . Read more in the\r\n      <a\r\n        href=\"https://storybook.js.org/docs\"\r\n        target=\"_blank\"\r\n        rel=\"noopener noreferrer\">\r\n        docs\r\n      </a>\r\n      .\r\n    </p>\r\n    <div class=\"tip-wrapper\">\r\n      <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\r\n      <svg\r\n        width=\"10\"\r\n        height=\"10\"\r\n        viewBox=\"0 0 12 12\"\r\n        xmlns=\"http://www.w3.org/2000/svg\">\r\n        <g fill=\"none\" fillRule=\"evenodd\">\r\n          <path\r\n            d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\r\n            id=\"a\"\r\n            fill=\"#999\" />\r\n        </g>\r\n      </svg>\r\n      Viewports addon in the toolbar\r\n    </div>\r\n  </section>\r\n</article>\r\n"
         }
     ],
-    "modules": [],
+    "modules": [
+        {
+            "name": "AppRoutes",
+            "id": "module-AppRoutes-f1a32e5fa8079b99e289e0d9025d3aaf4d48896c01a62eb1e6a6c5cd87ef2f59649081a794291d1e5043d367015edf457973cfcaa37746825c1a3ada8709d8fd",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/app.routes.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\nimport { HomePageComponent } from '../stories/home-page/home-page.component';\r\nimport { AboutPageComponent } from '../stories/about-page/about-page.component';\r\n\r\nexport const routes: Routes = [\r\n  { path: '', component: HomePageComponent },\r\n  { path: 'home', component: HomePageComponent },\r\n  { path: 'about', component: AboutPageComponent },\r\n];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forChild(routes)],\r\n  exports: [RouterModule],\r\n})\r\nexport class AppRoutes {}\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        }
+    ],
     "miscellaneous": {
         "variables": [
             {
@@ -472,7 +547,27 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "ApplicationConfig",
-                "defaultValue": "{\r\n  providers: [provideRouter(routes)]\r\n}"
+                "defaultValue": "{\r\n  providers: [provideRouter(routes)],\r\n}"
+            },
+            {
+                "name": "Content",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/about-page/about-page.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{}"
+            },
+            {
+                "name": "Content",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/footer/footer.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{}"
             },
             {
                 "name": "Large",
@@ -532,7 +627,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<AboutPageComponent>",
-                "defaultValue": "{\r\n  title: 'Example/Page',\r\n  component: AboutPageComponent,\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  title: 'Example/About-Page',\r\n  component: AboutPageComponent,\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/footer/footer.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<FooterComponent>",
+                "defaultValue": "{\r\n  title: 'Example/Footer',\r\n  component: FooterComponent,\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
             },
             {
                 "name": "meta",
@@ -622,6 +727,17 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
+                "rawtype": "StoryObj<FooterComponent>",
+                "file": "src/stories/footer/footer.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
                 "rawtype": "StoryObj<ButtonComponent>",
                 "file": "src/stories/button/button.stories.ts",
                 "deprecated": false,
@@ -663,7 +779,51 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "ApplicationConfig",
-                    "defaultValue": "{\r\n  providers: [provideRouter(routes)]\r\n}"
+                    "defaultValue": "{\r\n  providers: [provideRouter(routes)],\r\n}"
+                }
+            ],
+            "src/stories/about-page/about-page.stories.ts": [
+                {
+                    "name": "Content",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/about-page/about-page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/about-page/about-page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<AboutPageComponent>",
+                    "defaultValue": "{\r\n  title: 'Example/About-Page',\r\n  component: AboutPageComponent,\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
+                }
+            ],
+            "src/stories/footer/footer.stories.ts": [
+                {
+                    "name": "Content",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/footer/footer.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/footer/footer.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<FooterComponent>",
+                    "defaultValue": "{\r\n  title: 'Example/Footer',\r\n  component: FooterComponent,\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
                 }
             ],
             "src/stories/button/button.stories.ts": [
@@ -782,18 +942,6 @@
                     "defaultValue": "{\n  title: 'Example/Page',\n  component: HomePageComponent,\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n    layout: 'fullscreen',\n  },\n}"
                 }
             ],
-            "src/stories/about-page/about-page.stories.ts": [
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/about-page/about-page.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<AboutPageComponent>",
-                    "defaultValue": "{\r\n  title: 'Example/Page',\r\n  component: AboutPageComponent,\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
-                }
-            ],
             ".storybook/preview.ts": [
                 {
                     "name": "preview",
@@ -817,6 +965,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<AboutPageComponent>",
                     "file": "src/stories/about-page/about-page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "src/stories/footer/footer.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<FooterComponent>",
+                    "file": "src/stories/footer/footer.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -866,7 +1027,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 4,
+        "count": 3,
         "status": "low",
         "files": [
             {
@@ -903,6 +1064,16 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "AboutPageComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/about-page/about-page.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Content",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -972,6 +1143,35 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Small",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/footer/footer.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FooterComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/footer/footer.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Content",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/footer/footer.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
