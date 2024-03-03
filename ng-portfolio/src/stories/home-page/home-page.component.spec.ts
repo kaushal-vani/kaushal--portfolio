@@ -19,4 +19,19 @@ describe('HomePageComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should set user to null on logout', () => {
+    component.doLogout();
+    expect(component.user).toBeNull();
+  });
+
+  it('should set user on login', () => {
+    component.doLogin();
+    expect(component.user).toEqual({ name: 'Jane Doe' });
+  });
+
+  it('should set user on create account', () => {
+    component.doCreateAccount();
+    expect(component.user).toEqual({ name: 'Jane Doe' });
+  });
 });
