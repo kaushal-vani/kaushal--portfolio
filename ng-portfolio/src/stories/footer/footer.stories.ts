@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/angular';
 import { FooterComponent } from './footer.component';
 
 const meta: Meta<FooterComponent> = {
-  title: 'Example/Footer',
+  title: 'Portfolio/Footer',
   component: FooterComponent,
   tags: ['autodocs'],
   parameters: {

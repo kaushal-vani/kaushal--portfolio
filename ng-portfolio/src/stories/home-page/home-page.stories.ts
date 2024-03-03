@@ -4,7 +4,7 @@ import { within, userEvent, expect } from '@storybook/test';
 import { HomePageComponent } from './home-page.component';
 
 const meta: Meta<HomePageComponent> = {
-  title: 'Example/Page',
+  title: 'Portfolio/Home-Page',
   component: HomePageComponent,
   tags: ['autodocs'],
   parameters: {
