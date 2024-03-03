@@ -1,12 +1,12 @@
 export interface SocialMedia {
   icon_url: string;
   href_url: string;
-  altText: string;
+  alt_text: string;
   description?: string;
 }
 export interface Logo {
   icon_url: string;
-  altText: string;
+  alt_text: string;
 }
 export interface FooterContent {
   logo: Logo;
