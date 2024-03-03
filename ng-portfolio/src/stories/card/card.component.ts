@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-potfolio-card',
@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss',
 })
-export class CardComponent {}
+export class CardComponent {
+  @Input() imageUrl: string = '';
+  @Input() altText: string = '';
+  @Input() title: string = '';
+  @Input() description: string = '';
+  @Input() meta: string = '';
+}

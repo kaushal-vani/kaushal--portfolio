@@ -1,1 +1,19 @@
-<p>Card Works !</p>
+<div class="card-container">
+  <div class="card">
+    <div class="card-header">
+      <img
+        [src]="imageUrl"
+        [alt]="altText"
+        width="36"
+        height="36"
+        class="card-image" />
+      <h5 class="card-title">{{ title }}</h5>
+    </div>
+    <div class="card-content">
+      <p class="card-text">
+        {{ description }}
+      </p>
+      <p class="card-meta">{{ meta }}</p>
+    </div>
+  </div>
+</div>
