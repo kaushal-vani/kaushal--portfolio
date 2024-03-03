@@ -3,17 +3,18 @@
     <div>
       <img
         [src]="content.logo.icon_url"
-        width="42"
-        height="42"
+        width="36"
+        height="36"
         [alt]="content.logo.alt_text" />
       <h1>{{ content.heading }}</h1>
     </div>
     <div>
-      <img
-        [src]="content.chatBot.icon_url"
-        width="36"
-        height="36"
-        [alt]="content.chatBot.alt_text" />
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-end mb-md-0">
+        <li><a href="#" class="nav-link px-2 link-dark">Home</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">Projects</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">Skills</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">About</a></li>
+      </ul>
     </div>
   </div>
 </header>

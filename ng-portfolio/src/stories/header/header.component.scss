@@ -1,7 +1,7 @@
 .storybook-header {
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 15px 20px;
+  border-bottom: 10px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -9,26 +9,29 @@
   color: #323232;
 }
 
-.storybook-header svg {
-  display: inline-block;
-  vertical-align: top;
-}
-
 .storybook-header h1 {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 30px;
   line-height: 1;
   margin: 6px 0 6px 10px;
   display: inline-block;
   vertical-align: top;
 }
 
-.storybook-header button + button {
+.nav-link:hover{
+  border-bottom:thin solid #323232;
   margin-left: 10px;
 }
 
-.storybook-header .welcome {
-  color: #333;
-  font-size: 14px;
-  margin-right: 10px;
+@media (max-width: 600px) {
+  .storybook-header {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    border-bottom: 10px solid rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #4d244d;
+    color: #dfcbcb;
+  }
 }
