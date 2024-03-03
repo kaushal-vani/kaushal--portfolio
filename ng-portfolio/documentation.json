@@ -2,6 +2,57 @@
     "pipes": [],
     "interfaces": [
         {
+            "name": "Card",
+            "id": "interface-Card-b07a10da2b6e39b5078837523a8b7f2e5a686cc644a6b1920def2a3eea30d3a26483319c3acc3b7b412291e4aea8c9ee58deb139e1b0f646ded4699c749f0313",
+            "file": "src/stories/about-page/about-page.models.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface Card {\r\n  icon_path: string;\r\n  alt_text: string;\r\n  title: string;\r\n  description: string;\r\n}\r\n",
+            "properties": [
+                {
+                    "name": "alt_text",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                },
+                {
+                    "name": "description",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 5
+                },
+                {
+                    "name": "icon_path",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "title",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 171,
+            "methods": [],
+            "extends": []
+        },
+        {
             "name": "FooterContent",
             "id": "interface-FooterContent-cbcca31a666d004d25777627f3adb8eca1fc74f72c672ab6833f7075da8622c1344698ca9e8192c1580b23fb24f4cdf41c43d5543e3d542a526c03b90745cd15",
             "file": "src/stories/footer/footer.models.ts",
@@ -247,7 +298,7 @@
     "components": [
         {
             "name": "AboutPageComponent",
-            "id": "component-AboutPageComponent-6a907735de003fdc477f247698ba8460619079434b2f060a63e0e910e713bbf062b5d5674bcc7ad8ed8712f4d6851f327de74c6223ecb3c0592232d0117544ac",
+            "id": "component-AboutPageComponent-8e78a726ea87f23673d9a300b1334d024845c7cbbb2faf62ee66a8fac2dfa38c3834bb9a3d09da962d46aa503672441200cba205d3d1f26d6b9a23ceb9b67395",
             "file": "src/stories/about-page/about-page.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -266,7 +317,18 @@
             "hostDirectives": [],
             "inputsClass": [],
             "outputsClass": [],
-            "propertiesClass": [],
+            "propertiesClass": [
+                {
+                    "name": "content",
+                    "defaultValue": "AngularCardMock",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Card",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                }
+            ],
             "methodsClass": [],
             "deprecated": false,
             "deprecationMessage": "",
@@ -277,22 +339,26 @@
                 {
                     "name": "CommonModule",
                     "type": "module"
+                },
+                {
+                    "name": "CardComponent",
+                    "type": "component"
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-portfolio-about-page',\r\n  standalone: true,\r\n  imports: [CommonModule],\r\n  templateUrl: './about-page.component.html',\r\n  styleUrls: ['./about-page.component.scss'],\r\n})\r\nexport class AboutPageComponent {}\r\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component } from '@angular/core';\r\nimport type { Card } from './about-page.models';\r\nimport { AngularCardMock } from './about-page.mocks';\r\nimport { CardComponent } from '../card/card.component';\r\n\r\n@Component({\r\n  selector: 'app-portfolio-about-page',\r\n  standalone: true,\r\n  imports: [CommonModule, CardComponent],\r\n  templateUrl: './about-page.component.html',\r\n  styleUrls: ['./about-page.component.scss'],\r\n})\r\nexport class AboutPageComponent {\r\n  content: Card = AngularCardMock;\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "body {\r\n    font-family: Arial, sans-serif;\r\n    line-height: 1.6;\r\n    margin: 20px;\r\n  }\r\n  h2,\r\n  h3 {\r\n    color: #3498db;\r\n  }\r\n  ul {\r\n    list-style-type: none;\r\n    padding: 0;\r\n  }\r\n  li {\r\n    margin-bottom: 10px;\r\n  }",
+                    "data": "body {\r\n    font-family: Arial, sans-serif;\r\n    line-height: 1.6;\r\n    margin: 20px;\r\n  }\r\n  h2,\r\n  h3 {\r\n    color: #323232;\r\n    text-align: center;\r\n  }\r\n  ul {\r\n    list-style-type: none;\r\n    padding: 0;\r\n  }\r\n  li {\r\n    margin-bottom: 10px;\r\n  }",
                     "styleUrl": "./about-page.component.scss"
                 }
             ],
             "stylesData": "",
             "extends": [],
-            "templateData": "<h2>Project Title</h2>\r\n"
+            "templateData": "<h2>Tech Stack</h2>\r\n"
         },
         {
             "name": "AppComponent",
@@ -492,7 +558,7 @@
         },
         {
             "name": "CardComponent",
-            "id": "component-CardComponent-aaa24ba3d59d5ca606c8f6cbf045c1d50bd67859758ff16771d08f3f0e396d439279c914ddfb25e366b105876c2b04b8113479df0bf0b2e1f2159e4b911b3bcf",
+            "id": "component-CardComponent-485b1d261be98bfbff8f49e76bcae85d4d8a719a28089beec2c1875600a2229e62d9fb2401b98fac7b01dc11b491035c2eca41e1c11d6a842ebb2dd36c1f86d5",
             "file": "src/stories/card/card.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -507,7 +573,44 @@
             ],
             "viewProviders": [],
             "hostDirectives": [],
-            "inputsClass": [],
+            "inputsClass": [
+                {
+                    "name": "altText",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "description",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "imageUrl",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "title",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
             "outputsClass": [],
             "propertiesClass": [],
             "methodsClass": [],
@@ -525,13 +628,13 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-potfolio-card',\r\n  standalone: true,\r\n  imports: [CommonModule],\r\n  templateUrl: './card.component.html',\r\n  styleUrl: './card.component.scss',\r\n})\r\nexport class CardComponent {}\r\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-potfolio-card',\r\n  standalone: true,\r\n  imports: [CommonModule],\r\n  templateUrl: './card.component.html',\r\n  styleUrl: './card.component.scss',\r\n})\r\nexport class CardComponent {\r\n  @Input() imageUrl: string = '';\r\n  @Input() altText: string = '';\r\n  @Input() title: string = '';\r\n  @Input() description: string = '';\r\n}\r\n",
             "styleUrl": "./card.component.scss",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<p>Card Works !</p>\r\n"
+            "templateData": "<div class=\"horizontal-card\">\r\n  <img [src]=\"imageUrl\" [alt]=\"altText\" class=\"card-image\" />\r\n  <div class=\"card-content\">\r\n    <h3 class=\"card-title\">{{ title }}</h3>\r\n    <p class=\"card-description\">{{ description }}</p>\r\n  </div>\r\n</div>\r\n"
         },
         {
             "name": "FooterComponent",
@@ -634,13 +737,13 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".storybook-header {\r\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\r\n  padding: 15px 20px;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n  background-color: #C5ADC5;\r\n  color: #323232;\r\n}\r\n\r\n.storybook-header svg {\r\n  display: inline-block;\r\n  vertical-align: top;\r\n}\r\n\r\n.storybook-header h1 {\r\n  font-weight: 700;\r\n  font-size: 36px;\r\n  line-height: 1;\r\n  margin: 6px 0 6px 10px;\r\n  display: inline-block;\r\n  vertical-align: top;\r\n}\r\n\r\n.storybook-header button + button {\r\n  margin-left: 10px;\r\n}\r\n\r\n.storybook-header .welcome {\r\n  color: #333;\r\n  font-size: 14px;\r\n  margin-right: 10px;\r\n}\r\n",
+                    "data": ".storybook-header {\r\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n  border-bottom: 10px solid rgba(0, 0, 0, 0.1);\r\n  padding: 1rem;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n  background-color: #C5ADC5;\r\n  color: #323232;\r\n}\r\n\r\n.storybook-header h1 {\r\n  font-weight: 700;\r\n  font-size: 30px;\r\n  line-height: 1;\r\n  margin: 6px 0 6px 10px;\r\n  display: inline-block;\r\n  vertical-align: top;\r\n}\r\n\r\n.nav-link:hover{\r\n  border-bottom:thin solid #323232;\r\n  margin-left: 10px;\r\n}\r\n\r\n@media (max-width: 600px) {\r\n  .storybook-header {\r\n    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n    border-bottom: 10px solid rgba(0, 0, 0, 0.1);\r\n    padding: 1rem;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    background-color: #4d244d;\r\n    color: #dfcbcb;\r\n  }\r\n}",
                     "styleUrl": "./header.component.scss"
                 }
             ],
             "stylesData": "",
             "extends": [],
-            "templateData": "<header>\r\n  <div class=\"storybook-header\">\r\n    <div>\r\n      <img\r\n        [src]=\"content.logo.icon_url\"\r\n        width=\"42\"\r\n        height=\"42\"\r\n        [alt]=\"content.logo.alt_text\" />\r\n      <h1>{{ content.heading }}</h1>\r\n    </div>\r\n    <div>\r\n      <img\r\n        [src]=\"content.chatBot.icon_url\"\r\n        width=\"36\"\r\n        height=\"36\"\r\n        [alt]=\"content.chatBot.alt_text\" />\r\n    </div>\r\n  </div>\r\n</header>\r\n"
+            "templateData": "<header>\r\n  <div class=\"storybook-header\">\r\n    <div>\r\n      <img\r\n        [src]=\"content.logo.icon_url\"\r\n        width=\"36\"\r\n        height=\"36\"\r\n        [alt]=\"content.logo.alt_text\" />\r\n      <h1>{{ content.heading }}</h1>\r\n    </div>\r\n    <div>\r\n      <ul class=\"nav col-12 col-md-auto mb-2 justify-content-end mb-md-0\">\r\n        <li><a href=\"#\" class=\"nav-link px-2 link-dark\">Home</a></li>\r\n        <li><a href=\"#\" class=\"nav-link px-2 link-dark\">Projects</a></li>\r\n        <li><a href=\"#\" class=\"nav-link px-2 link-dark\">Skills</a></li>\r\n        <li><a href=\"#\" class=\"nav-link px-2 link-dark\">About</a></li>\r\n      </ul>\r\n    </div>\r\n  </div>\r\n</header>\r\n"
         },
         {
             "name": "HomePageComponent",
@@ -779,6 +882,16 @@
     "miscellaneous": {
         "variables": [
             {
+                "name": "AngularCardMock",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/about-page/about-page.mocks.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Card",
+                "defaultValue": "{\r\n  icon_path: '../../assets/storybook.svg',\r\n  alt_text: 'Angular Card Logo',\r\n  title: 'Angular',\r\n  description:\r\n    'Angular is a powerful open-source web application framework for building dynamic, single-page applications with a focus on modular and declarative programming.',\r\n}"
+            },
+            {
                 "name": "appConfig",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -812,7 +925,7 @@
                 "name": "Content",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/card/card.stories.ts",
+                "file": "src/stories/footer/footer.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -822,11 +935,11 @@
                 "name": "Content",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/footer/footer.stories.ts",
+                "file": "src/stories/card/card.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{}"
+                "defaultValue": "(args: CardComponent) => ({\r\n  props: args,\r\n  template: `\r\n    <app-card\r\n      [imageUrl]=\"imageUrl\"\r\n      [title]=\"title\"\r\n      [altText]=\"altText\"\r\n      [description]=\"description\"\r\n    ></app-card>\r\n  `,\r\n})"
             },
             {
                 "name": "Content",
@@ -942,16 +1055,6 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/card/card.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<CardComponent>",
-                "defaultValue": "{\r\n  title: 'Portfolio/Card',\r\n  component: CardComponent,\r\n  tags: ['autodocs'],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/button/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -967,6 +1070,16 @@
                 "deprecationMessage": "",
                 "type": "Meta<FooterComponent>",
                 "defaultValue": "{\r\n  title: 'Portfolio/Footer',\r\n  component: FooterComponent,\r\n  tags: ['autodocs'],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/card/card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<CardComponent>",
+                "defaultValue": "{\r\n  title: 'Portfolio/Card',\r\n  component: CardComponent,\r\n  tags: ['autodocs'],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
             },
             {
                 "name": "meta",
@@ -1046,17 +1159,6 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<CardComponent>",
-                "file": "src/stories/card/card.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 183
-            },
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
                 "rawtype": "StoryObj<ButtonComponent>",
                 "file": "src/stories/button/button.stories.ts",
                 "deprecated": false,
@@ -1070,6 +1172,17 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<FooterComponent>",
                 "file": "src/stories/footer/footer.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<CardComponent>",
+                "file": "src/stories/card/card.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1100,6 +1213,18 @@
         ],
         "enumerations": [],
         "groupedVariables": {
+            "src/stories/about-page/about-page.mocks.ts": [
+                {
+                    "name": "AngularCardMock",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/about-page/about-page.mocks.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Card",
+                    "defaultValue": "{\r\n  icon_path: '../../assets/storybook.svg',\r\n  alt_text: 'Angular Card Logo',\r\n  title: 'Angular',\r\n  description:\r\n    'Angular is a powerful open-source web application framework for building dynamic, single-page applications with a focus on modular and declarative programming.',\r\n}"
+                }
+            ],
             "src/app/app.config.ts": [
                 {
                     "name": "appConfig",
@@ -1166,28 +1291,6 @@
                     "defaultValue": "{\r\n  title: 'Portfolio/About-Page',\r\n  component: AboutPageComponent,\r\n  tags: ['autodocs'],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
                 }
             ],
-            "src/stories/card/card.stories.ts": [
-                {
-                    "name": "Content",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/card/card.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{}"
-                },
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/card/card.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<CardComponent>",
-                    "defaultValue": "{\r\n  title: 'Portfolio/Card',\r\n  component: CardComponent,\r\n  tags: ['autodocs'],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
-                }
-            ],
             "src/stories/footer/footer.stories.ts": [
                 {
                     "name": "Content",
@@ -1208,6 +1311,28 @@
                     "deprecationMessage": "",
                     "type": "Meta<FooterComponent>",
                     "defaultValue": "{\r\n  title: 'Portfolio/Footer',\r\n  component: FooterComponent,\r\n  tags: ['autodocs'],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
+                }
+            ],
+            "src/stories/card/card.stories.ts": [
+                {
+                    "name": "Content",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/card/card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "(args: CardComponent) => ({\r\n  props: args,\r\n  template: `\r\n    <app-card\r\n      [imageUrl]=\"imageUrl\"\r\n      [title]=\"title\"\r\n      [altText]=\"altText\"\r\n      [description]=\"description\"\r\n    ></app-card>\r\n  `,\r\n})"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/card/card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<CardComponent>",
+                    "defaultValue": "{\r\n  title: 'Portfolio/Card',\r\n  component: CardComponent,\r\n  tags: ['autodocs'],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
                 }
             ],
             "src/stories/header/header.stories.ts": [
@@ -1387,19 +1512,6 @@
                     "kind": 183
                 }
             ],
-            "src/stories/card/card.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<CardComponent>",
-                    "file": "src/stories/card/card.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
             "src/stories/button/button.stories.ts": [
                 {
                     "name": "Story",
@@ -1420,6 +1532,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<FooterComponent>",
                     "file": "src/stories/footer/footer.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "src/stories/card/card.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<CardComponent>",
+                    "file": "src/stories/card/card.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -1494,7 +1619,26 @@
                 "linktype": "component",
                 "name": "AboutPageComponent",
                 "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/about-page/about-page.mocks.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "AngularCardMock",
+                "coveragePercent": 0,
                 "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/about-page/about-page.models.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "Card",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
                 "status": "low"
             },
             {
@@ -1582,7 +1726,7 @@
                 "linktype": "component",
                 "name": "CardComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/1",
+                "coverageCount": "0/5",
                 "status": "low"
             },
             {
