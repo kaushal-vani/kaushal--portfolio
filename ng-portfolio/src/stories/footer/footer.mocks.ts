@@ -1,12 +1,12 @@
 import type { FooterContent, Logo, SocialMedia } from './footer.models';
 const LinkedInMocks: SocialMedia = {
   icon_url: 'https://img.icons8.com/fluency/48/linkedin.png',
-  href_url: 'https://www.linkedin.com/in/example',
+  href_url: 'https://www.linkedin.com/in/kaushal-vani/',
   altText: 'LinkedIn',
   description: 'Professional network',
 };
 const GitHubMocks: SocialMedia = {
-  icon_url: 'linkedin-icon',
+  icon_url: 'https://img.icons8.com/fluency/48/github.png',
   href_url: 'https://github.com/kaushal-vani',
   altText: 'GitHub',
   description: 'Professional network',

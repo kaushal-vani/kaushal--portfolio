@@ -23,12 +23,12 @@
         /></a>
       </li>
       <li class="ms-4">
-        <a class="text-muted" [href]=""
+        <a class="text-muted" [href]="content.gitHub.href_url"
           ><img
             width="36"
             height="36"
-            src="https://img.icons8.com/fluency/48/github.png"
-            alt="github"
+            [src]="content.gitHub.icon_url"
+            [alt]="content.gitHub.altText"
         /></a>
       </li>
     </ul>
