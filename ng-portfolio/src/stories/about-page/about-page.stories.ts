@@ -4,6 +4,7 @@ import { AboutPageComponent } from './about-page.component';
 const meta: Meta<AboutPageComponent> = {
   title: 'Example/About-Page',
   component: AboutPageComponent,
+  tags: ['autodocs'],
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
     layout: 'fullscreen',

@@ -6,6 +6,7 @@ import { HomePageComponent } from './home-page.component';
 const meta: Meta<HomePageComponent> = {
   title: 'Example/Page',
   component: HomePageComponent,
+  tags: ['autodocs'],
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
     layout: 'fullscreen',
