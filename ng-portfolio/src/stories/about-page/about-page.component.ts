@@ -11,5 +11,5 @@ import { CardComponent } from '../card/card.component';
   styleUrls: ['./about-page.component.scss'],
 })
 export class AboutPageComponent {
-  aboutPageCardMocks = AboutPageCardMocks;
+  content = AboutPageCardMocks;
 }
