@@ -23,7 +23,7 @@
   margin-left: 10px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 610px) {
   .storybook-header {
     font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     border-bottom: 10px solid rgba(0, 0, 0, 0.1);
@@ -31,7 +31,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #4d244d;
-    color: #dfcbcb;
+  }
+  .storybook-header h1{
+    display: none;
   }
 }
