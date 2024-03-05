@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "commit": "git-cz",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
@@ -13,6 +14,12 @@
     "build-storybook": "ng run ng-portfolio:build-storybook",
     "lint": "ng lint",
     "prettier": "npx prettier --write ."
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git",
+      "czConfig": "./config/cz.config.js"
+    }
   },
   "private": true,
   "dependencies": {
