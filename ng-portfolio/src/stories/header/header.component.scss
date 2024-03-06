@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #C5ADC5;
+  background-color: #c5adc5;
   color: #323232;
 }
 
@@ -18,8 +18,8 @@
   vertical-align: top;
 }
 
-.nav-link:hover{
-  border-bottom:thin solid #323232;
+.nav-link:hover {
+  border-bottom: thin solid #323232;
   margin-left: 10px;
 }
 
@@ -32,7 +32,7 @@
     align-items: center;
     justify-content: space-between;
   }
-  .storybook-header h1{
+  .storybook-header h1 {
     display: none;
   }
 }

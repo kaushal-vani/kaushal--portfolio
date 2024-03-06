@@ -3,3 +3,4 @@ dist/
 *.spec.ts
 *.config.ts
 *.stories.ts
+*.html

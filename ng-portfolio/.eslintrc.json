@@ -1,9 +1,6 @@
 // .eslintrc.json
 {
-  "extends": [
-    "plugin:@typescript-eslint/recommended",
-    "prettier"
-  ],
+  "extends": ["plugin:@typescript-eslint/recommended", "prettier"],
   "plugins": ["prettier"],
   "rules": {
     // other rules...
@@ -12,14 +9,14 @@
     "max-len": ["error", { "code": 150 }]
   },
   "parserOptions": {
-    "project": "./tsconfig.json",
+    "project": "ng-portfolio/tsconfig.json",
     "extraFileExtensions": [".html"]
   },
   "overrides": [
     {
       "files": ["*.ts"],
       "parserOptions": {
-        "project": ["./tsconfig.json"]
+        "project": ["ng-portfolio/tsconfig.json"]
       }
     }
   ]

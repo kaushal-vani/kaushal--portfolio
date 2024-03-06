@@ -39,10 +39,7 @@ Content.argTypes = {
     control: {
       type: 'text',
     },
-    onChange: (
-      value: string,
-      { args }: { args: CardComponent; argTypes: Record<string, unknown> }
-    ) => {
+    onChange: (value: string, { args }: { args: CardComponent; argTypes: Record<string, unknown> }) => {
       // Update other args based on imageUrl change if needed
       args.title = `Card with ${value}`;
       args.altText = `Alt Text for ${value}`;
