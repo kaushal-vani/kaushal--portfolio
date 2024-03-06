@@ -2,13 +2,26 @@
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "targetDefaults": {
     "build": {
-      "cache": true,
-      "dependsOn": ["^build"],
-      "inputs": ["production", "^production"]
+      "executor": "@nrwl/web:build",
+      "options": {
+        "cache": true
+      },
+      "configurations": {
+        "production": {
+          "inputs": ["!{projectRoot}/.eslintrc.json", "!{projectRoot}/eslint.config.js"]
+        }
+      }
     },
     "test": {
-      "cache": true,
-      "inputs": ["default", "^production"]
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "cache": true
+      },
+      "configurations": {
+        "production": {
+          "inputs": ["!{projectRoot}/.eslintrc.json", "!{projectRoot}/eslint.config.js"]
+        }
+      }
     }
   },
   "affected": {
@@ -17,11 +30,7 @@
   "namedInputs": {
     "sharedGlobals": [],
     "default": ["{projectRoot}/**/*", "sharedGlobals"],
-    "production": [
-      "default",
-      "!{projectRoot}/.eslintrc.json",
-      "!{projectRoot}/eslint.config.js"
-    ]
+    "production": ["default"]
   },
   "nxCloudAccessToken": "ZDAwNTFlNmMtMzgwMS00NmU5LWJhODQtMDkyMjNiMDgzOGJjfHJlYWQtd3JpdGU="
 }

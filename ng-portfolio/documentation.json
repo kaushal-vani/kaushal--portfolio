@@ -2,13 +2,109 @@
     "pipes": [],
     "interfaces": [
         {
-            "name": "Card",
-            "id": "interface-Card-b07a10da2b6e39b5078837523a8b7f2e5a686cc644a6b1920def2a3eea30d3a26483319c3acc3b7b412291e4aea8c9ee58deb139e1b0f646ded4699c749f0313",
+            "name": "AboutPageCard",
+            "id": "interface-AboutPageCard-49a7d6b17cfa951b7e2147ff539b7e2a62bcdfb3d964b4ee84666ae573a8d44651d10a870ee13715f2ec9d7ea05d78033858e9de46e578c044708a595606b551",
             "file": "src/stories/about-page/about-page.models.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "export interface Card {\r\n  icon_path: string;\r\n  alt_text: string;\r\n  title: string;\r\n  description: string;\r\n}\r\n",
+            "sourceCode": "export interface Card {\r\n  icon_path: string;\r\n  alt_text: string;\r\n  title: string;\r\n  meta: string;\r\n  description: string;\r\n}\r\n\r\nexport interface AboutPageCard {\r\n  angular: Card;\r\n  scss: Card;\r\n  html: Card;\r\n  gitHub: Card;\r\n  jest: Card;\r\n  ngrx: Card;\r\n  rxjs: Card;\r\n  storyBook: Card;\r\n  typeScript: Card;\r\n}\r\n",
+            "properties": [
+                {
+                    "name": "angular",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Card",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                },
+                {
+                    "name": "gitHub",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Card",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                },
+                {
+                    "name": "html",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Card",
+                    "optional": false,
+                    "description": "",
+                    "line": 12
+                },
+                {
+                    "name": "jest",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Card",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                },
+                {
+                    "name": "ngrx",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Card",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                },
+                {
+                    "name": "rxjs",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Card",
+                    "optional": false,
+                    "description": "",
+                    "line": 16
+                },
+                {
+                    "name": "scss",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Card",
+                    "optional": false,
+                    "description": "",
+                    "line": 11
+                },
+                {
+                    "name": "storyBook",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Card",
+                    "optional": false,
+                    "description": "",
+                    "line": 17
+                },
+                {
+                    "name": "typeScript",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Card",
+                    "optional": false,
+                    "description": "",
+                    "line": 18
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 171,
+            "methods": [],
+            "extends": []
+        },
+        {
+            "name": "Card",
+            "id": "interface-Card-49a7d6b17cfa951b7e2147ff539b7e2a62bcdfb3d964b4ee84666ae573a8d44651d10a870ee13715f2ec9d7ea05d78033858e9de46e578c044708a595606b551",
+            "file": "src/stories/about-page/about-page.models.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface Card {\r\n  icon_path: string;\r\n  alt_text: string;\r\n  title: string;\r\n  meta: string;\r\n  description: string;\r\n}\r\n\r\nexport interface AboutPageCard {\r\n  angular: Card;\r\n  scss: Card;\r\n  html: Card;\r\n  gitHub: Card;\r\n  jest: Card;\r\n  ngrx: Card;\r\n  rxjs: Card;\r\n  storyBook: Card;\r\n  typeScript: Card;\r\n}\r\n",
             "properties": [
                 {
                     "name": "alt_text",
@@ -26,7 +122,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 5
+                    "line": 6
                 },
                 {
                     "name": "icon_path",
@@ -36,6 +132,15 @@
                     "optional": false,
                     "description": "",
                     "line": 2
+                },
+                {
+                    "name": "meta",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 5
                 },
                 {
                     "name": "title",
@@ -298,7 +403,7 @@
     "components": [
         {
             "name": "AboutPageComponent",
-            "id": "component-AboutPageComponent-8e78a726ea87f23673d9a300b1334d024845c7cbbb2faf62ee66a8fac2dfa38c3834bb9a3d09da962d46aa503672441200cba205d3d1f26d6b9a23ceb9b67395",
+            "id": "component-AboutPageComponent-771023f4e0694de1603bc668ae1363aeed44d6135b7a0cc91a430913ddd0a0e2fada89e2b956b3e5555bd1abf5a0e584d1d0c1e03d2fadc169cba2374ecb83be",
             "file": "src/stories/about-page/about-page.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -320,13 +425,13 @@
             "propertiesClass": [
                 {
                     "name": "content",
-                    "defaultValue": "AngularCardMock",
+                    "defaultValue": "AboutPageCardMocks",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Card",
+                    "type": "",
                     "optional": false,
                     "description": "",
-                    "line": 15
+                    "line": 14
                 }
             ],
             "methodsClass": [],
@@ -348,17 +453,17 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component } from '@angular/core';\r\nimport type { Card } from './about-page.models';\r\nimport { AngularCardMock } from './about-page.mocks';\r\nimport { CardComponent } from '../card/card.component';\r\n\r\n@Component({\r\n  selector: 'app-portfolio-about-page',\r\n  standalone: true,\r\n  imports: [CommonModule, CardComponent],\r\n  templateUrl: './about-page.component.html',\r\n  styleUrls: ['./about-page.component.scss'],\r\n})\r\nexport class AboutPageComponent {\r\n  content: Card = AngularCardMock;\r\n}\r\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component } from '@angular/core';\r\nimport { AboutPageCardMocks } from './about-page.mocks';\r\nimport { CardComponent } from '../card/card.component';\r\n\r\n@Component({\r\n  selector: 'app-portfolio-about-page',\r\n  standalone: true,\r\n  imports: [CommonModule, CardComponent],\r\n  templateUrl: './about-page.component.html',\r\n  styleUrls: ['./about-page.component.scss'],\r\n})\r\nexport class AboutPageComponent {\r\n  content = AboutPageCardMocks;\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "body {\r\n    font-family: Arial, sans-serif;\r\n    line-height: 1.6;\r\n    margin: 20px;\r\n  }\r\n  h2,\r\n  h3 {\r\n    color: #323232;\r\n    text-align: center;\r\n  }\r\n  ul {\r\n    list-style-type: none;\r\n    padding: 0;\r\n  }\r\n  li {\r\n    margin-bottom: 10px;\r\n  }",
+                    "data": "body {\r\n    font-family: Arial, sans-serif;\r\n    line-height: 1.6;\r\n    margin: 20px;\r\n  }\r\n  h2,\r\n  h3 {\r\n    color: #323232;\r\n    text-align: center;\r\n  }\r\n  ul {\r\n    list-style-type: none;\r\n    padding: 0;\r\n  }\r\n  li {\r\n    margin-bottom: 10px;\r\n  }\r\n/* Add this to your existing styles */\r\n/* Styles for the card container */\r\n.card-container {\r\n  display: grid;\r\n  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));\r\n  gap: 20px; /* Add gap between cards */\r\n  padding: 20px; /* Adjust padding for spacing */\r\n}\r\n\r\n/* Styles for the card item */\r\n.card-item {\r\n  width: 100%; /* Ensure each card item takes 100% width */\r\n}\r\n\r\n/* Media query for larger screens */\r\n@media (min-width: 661px) {\r\n  .card-container {\r\n    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Default to one card per row */\r\n  }\r\n}\r\n\r\n/* Media query for screens larger than 992px (3 cards per row) */\r\n@media (min-width: 993px) {\r\n  .card-container {\r\n    grid-template-columns: repeat(3, minmax(300px, 1fr)); /* Three cards per row */\r\n  }\r\n}\r\n",
                     "styleUrl": "./about-page.component.scss"
                 }
             ],
             "stylesData": "",
             "extends": [],
-            "templateData": "<h2>Tech Stack</h2>\r\n"
+            "templateData": "<h2>Tech Stack</h2>\r\n<div class=\"card-container\">\r\n  <div *ngFor=\"let card of content\" class=\"card-item\">\r\n    <app-portfolio-card\r\n      [imageUrl]=\"card.icon_path\"\r\n      [altText]=\"card.alt_text\"\r\n      [description]=\"card.description\"\r\n      [title]=\"card.title\"\r\n      [meta]=\"card.meta\"></app-portfolio-card>\r\n  </div>\r\n</div>\r\n"
         },
         {
             "name": "AppComponent",
@@ -558,14 +663,14 @@
         },
         {
             "name": "CardComponent",
-            "id": "component-CardComponent-485b1d261be98bfbff8f49e76bcae85d4d8a719a28089beec2c1875600a2229e62d9fb2401b98fac7b01dc11b491035c2eca41e1c11d6a842ebb2dd36c1f86d5",
+            "id": "component-CardComponent-2b61b5bb8a199deaa61c45634c2e37bf8d44a5730364e6c76e1d3052d6eb5199b332e5afb829cc2c877cb51d1cb7f06083c51db0af386721793fbcd39af3c4dd",
             "file": "src/stories/card/card.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "app-potfolio-card",
+            "selector": "app-portfolio-card",
             "styleUrls": [],
             "styles": [],
             "templateUrl": [
@@ -602,6 +707,15 @@
                     "decorators": []
                 },
                 {
+                    "name": "meta",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
                     "name": "title",
                     "defaultValue": "''",
                     "deprecated": false,
@@ -628,13 +742,13 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-potfolio-card',\r\n  standalone: true,\r\n  imports: [CommonModule],\r\n  templateUrl: './card.component.html',\r\n  styleUrl: './card.component.scss',\r\n})\r\nexport class CardComponent {\r\n  @Input() imageUrl: string = '';\r\n  @Input() altText: string = '';\r\n  @Input() title: string = '';\r\n  @Input() description: string = '';\r\n}\r\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-portfolio-card',\r\n  standalone: true,\r\n  imports: [CommonModule],\r\n  templateUrl: './card.component.html',\r\n  styleUrl: './card.component.scss',\r\n})\r\nexport class CardComponent {\r\n  @Input() imageUrl: string = '';\r\n  @Input() altText: string = '';\r\n  @Input() title: string = '';\r\n  @Input() description: string = '';\r\n  @Input() meta: string = '';\r\n}\r\n",
             "styleUrl": "./card.component.scss",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<div class=\"horizontal-card\">\r\n  <img [src]=\"imageUrl\" [alt]=\"altText\" class=\"card-image\" />\r\n  <div class=\"card-content\">\r\n    <h3 class=\"card-title\">{{ title }}</h3>\r\n    <p class=\"card-description\">{{ description }}</p>\r\n  </div>\r\n</div>\r\n"
+            "templateData": "<div class=\"card-container\">\r\n  <div class=\"card\">\r\n    <div class=\"card-header\">\r\n      <img\r\n        [src]=\"imageUrl\"\r\n        [alt]=\"altText\"\r\n        width=\"40\"\r\n        height=\"30\"\r\n        class=\"card-image\" />\r\n      <h5 class=\"card-title\">{{ title }}</h5>\r\n    </div>\r\n    <div class=\"card-content\">\r\n      <p class=\"card-text\">\r\n        {{ description }}\r\n      </p>\r\n      <p class=\"card-meta\">{{ meta }}</p>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
         },
         {
             "name": "FooterComponent",
@@ -737,7 +851,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".storybook-header {\r\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n  border-bottom: 10px solid rgba(0, 0, 0, 0.1);\r\n  padding: 1rem;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n  background-color: #C5ADC5;\r\n  color: #323232;\r\n}\r\n\r\n.storybook-header h1 {\r\n  font-weight: 700;\r\n  font-size: 30px;\r\n  line-height: 1;\r\n  margin: 6px 0 6px 10px;\r\n  display: inline-block;\r\n  vertical-align: top;\r\n}\r\n\r\n.nav-link:hover{\r\n  border-bottom:thin solid #323232;\r\n  margin-left: 10px;\r\n}\r\n\r\n@media (max-width: 600px) {\r\n  .storybook-header {\r\n    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n    border-bottom: 10px solid rgba(0, 0, 0, 0.1);\r\n    padding: 1rem;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    background-color: #4d244d;\r\n    color: #dfcbcb;\r\n  }\r\n}",
+                    "data": ".storybook-header {\r\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n  border-bottom: 10px solid rgba(0, 0, 0, 0.1);\r\n  padding: 1rem;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n  background-color: #C5ADC5;\r\n  color: #323232;\r\n}\r\n\r\n.storybook-header h1 {\r\n  font-weight: 700;\r\n  font-size: 30px;\r\n  line-height: 1;\r\n  margin: 6px 0 6px 10px;\r\n  display: inline-block;\r\n  vertical-align: top;\r\n}\r\n\r\n.nav-link:hover{\r\n  border-bottom:thin solid #323232;\r\n  margin-left: 10px;\r\n}\r\n\r\n@media (max-width: 610px) {\r\n  .storybook-header {\r\n    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n    border-bottom: 10px solid rgba(0, 0, 0, 0.1);\r\n    padding: 1rem;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n  }\r\n  .storybook-header h1{\r\n    display: none;\r\n  }\r\n}",
                     "styleUrl": "./header.component.scss"
                 }
             ],
@@ -882,6 +996,16 @@
     "miscellaneous": {
         "variables": [
             {
+                "name": "AboutPageCardMocks",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/about-page/about-page.mocks.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Card[]",
+                "defaultValue": "Object.values({\r\n  html: HtmlCardMock,\r\n  scss: ScssCardMock,\r\n  typeScript: TypeScriptCardMock,\r\n  angular: AngularCardMock,\r\n  storyBook: StoryBookCardMock,\r\n  gitHub: GitHubCardMock,\r\n  jest: JestCardMock,\r\n  ngrx: NgrxCardMock,\r\n  rxjs: RxjsCardMock,\r\n})"
+            },
+            {
                 "name": "AngularCardMock",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -889,7 +1013,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Card",
-                "defaultValue": "{\r\n  icon_path: '../../assets/storybook.svg',\r\n  alt_text: 'Angular Card Logo',\r\n  title: 'Angular',\r\n  description:\r\n    'Angular is a powerful open-source web application framework for building dynamic, single-page applications with a focus on modular and declarative programming.',\r\n}"
+                "defaultValue": "{\r\n  icon_path: '../../assets/tech-stack/angular.svg',\r\n  alt_text: 'Angular Card Logo',\r\n  title: 'Angular',\r\n  meta: 'TypeScript-based open-source web application framework',\r\n  description: '',\r\n}"
             },
             {
                 "name": "appConfig",
@@ -925,21 +1049,21 @@
                 "name": "Content",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/footer/footer.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{}"
-            },
-            {
-                "name": "Content",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/card/card.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "(args: CardComponent) => ({\r\n  props: args,\r\n  template: `\r\n    <app-card\r\n      [imageUrl]=\"imageUrl\"\r\n      [title]=\"title\"\r\n      [altText]=\"altText\"\r\n      [description]=\"description\"\r\n    ></app-card>\r\n  `,\r\n})"
+            },
+            {
+                "name": "Content",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/footer/footer.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{}"
             },
             {
                 "name": "Content",
@@ -962,6 +1086,16 @@
                 "defaultValue": "{\r\n  logo: LogoMocks,\r\n  heading: \"© 2024 Kaushal's Portfolio\",\r\n  linkedIn: LinkedInMocks,\r\n  gitHub: GitHubMocks,\r\n}"
             },
             {
+                "name": "GitHubCardMock",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/about-page/about-page.mocks.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Card",
+                "defaultValue": "{\r\n  icon_path: '../../assets/tech-stack/github.svg',\r\n  alt_text: 'GitHub Card Logo',\r\n  title: 'GitHub',\r\n  meta: 'Collaborative Version Control',\r\n  description: '',\r\n}"
+            },
+            {
                 "name": "GitHubMocks",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -969,7 +1103,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "SocialMedia",
-                "defaultValue": "{\r\n  icon_url: 'https://img.icons8.com/fluency/48/github.png',\r\n  href_url: 'https://github.com/kaushal-vani',\r\n  alt_text: 'GitHub',\r\n  description: 'Professional network',\r\n}"
+                "defaultValue": "{\r\n  icon_url: '../../assets/tech-stack/github.svg',\r\n  href_url: 'https://github.com/kaushal-vani',\r\n  alt_text: 'GitHub',\r\n  description: 'Professional network',\r\n}"
             },
             {
                 "name": "HeaderContentMocks",
@@ -980,6 +1114,26 @@
                 "deprecationMessage": "",
                 "type": "HeaderContent",
                 "defaultValue": "{\r\n  heading: \"Kaushal's Portfolio\",\r\n  logo: LogoMocks,\r\n  chatBot: ChatBotMocks,\r\n}"
+            },
+            {
+                "name": "HtmlCardMock",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/about-page/about-page.mocks.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Card",
+                "defaultValue": "{\r\n  icon_path: '../../assets/tech-stack/html.svg',\r\n  alt_text: 'HTML',\r\n  title: 'HTML',\r\n  meta: 'Web Markup Language',\r\n  description: '',\r\n}"
+            },
+            {
+                "name": "JestCardMock",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/about-page/about-page.mocks.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Card",
+                "defaultValue": "{\r\n  icon_path: '../../assets/tech-stack/jest.svg',\r\n  alt_text: 'Jest Card Logo',\r\n  title: 'Jest',\r\n  meta: 'JavaScript Testing',\r\n  description: '',\r\n}"
             },
             {
                 "name": "Large",
@@ -999,7 +1153,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "SocialMedia",
-                "defaultValue": "{\r\n  icon_url: 'https://img.icons8.com/fluency/48/linkedin.png',\r\n  href_url: 'https://www.linkedin.com/in/kaushal-vani/',\r\n  alt_text: 'LinkedIn',\r\n  description: 'Professional network',\r\n}"
+                "defaultValue": "{\r\n  icon_url: '../../assets/tech-stack/linkedin.svg',\r\n  href_url: 'https://www.linkedin.com/in/kaushal-vani/',\r\n  alt_text: 'LinkedIn',\r\n  description: 'Professional network',\r\n}"
             },
             {
                 "name": "LoggedIn",
@@ -1065,21 +1219,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/footer/footer.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<FooterComponent>",
-                "defaultValue": "{\r\n  title: 'Portfolio/Footer',\r\n  component: FooterComponent,\r\n  tags: ['autodocs'],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/card/card.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<CardComponent>",
                 "defaultValue": "{\r\n  title: 'Portfolio/Card',\r\n  component: CardComponent,\r\n  tags: ['autodocs'],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/footer/footer.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<FooterComponent>",
+                "defaultValue": "{\r\n  title: 'Portfolio/Footer',\r\n  component: FooterComponent,\r\n  tags: ['autodocs'],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
             },
             {
                 "name": "meta",
@@ -1102,6 +1256,16 @@
                 "defaultValue": "{\n  title: 'Portfolio/Home-Page',\n  component: HomePageComponent,\n  tags: ['autodocs'],\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n    layout: 'fullscreen',\n  },\n}"
             },
             {
+                "name": "NgrxCardMock",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/about-page/about-page.mocks.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Card",
+                "defaultValue": "{\r\n  icon_path: '../../assets/tech-stack/ngrx.svg',\r\n  alt_text: 'Ngrx Card Logo',\r\n  title: 'Ngrx',\r\n  meta: 'Angular State Management.',\r\n  description: '',\r\n}"
+            },
+            {
                 "name": "preview",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -1122,6 +1286,26 @@
                 "defaultValue": "{\n  args: {\n    primary: true,\n    label: 'Button',\n  },\n}"
             },
             {
+                "name": "RxjsCardMock",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/about-page/about-page.mocks.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Card",
+                "defaultValue": "{\r\n  icon_path: '../../assets/tech-stack/rxjs.svg',\r\n  alt_text: 'Rxjs Card Logo',\r\n  title: 'Rxjs',\r\n  meta: 'Reactive Programming',\r\n  description: '',\r\n}"
+            },
+            {
+                "name": "ScssCardMock",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/about-page/about-page.mocks.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Card",
+                "defaultValue": "{\r\n  icon_path: '../../assets/tech-stack/scss.svg',\r\n  alt_text: 'Scss Card Logo',\r\n  title: 'Scss',\r\n  meta: 'Stylesheet Enhancement',\r\n  description: '',\r\n}"
+            },
+            {
                 "name": "Secondary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -1140,6 +1324,26 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n  args: {\n    size: 'small',\n    label: 'Button',\n  },\n}"
+            },
+            {
+                "name": "StoryBookCardMock",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/about-page/about-page.mocks.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Card",
+                "defaultValue": "{\r\n  icon_path: '../../assets/tech-stack/storybook.svg',\r\n  alt_text: 'Storybook Card Logo',\r\n  title: 'Storybook',\r\n  meta: 'Component Development & Documentation.',\r\n  description: '',\r\n}"
+            },
+            {
+                "name": "TypeScriptCardMock",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/about-page/about-page.mocks.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Card",
+                "defaultValue": "{\r\n  icon_path: '../../assets/tech-stack/typescript.svg',\r\n  alt_text: 'Typescript Card Logo',\r\n  title: 'Typescript',\r\n  meta: 'Static Typing',\r\n  description: '',\r\n}"
             }
         ],
         "functions": [],
@@ -1170,8 +1374,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<FooterComponent>",
-                "file": "src/stories/footer/footer.stories.ts",
+                "rawtype": "StoryObj<CardComponent>",
+                "file": "src/stories/card/card.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1181,8 +1385,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<CardComponent>",
-                "file": "src/stories/card/card.stories.ts",
+                "rawtype": "StoryObj<FooterComponent>",
+                "file": "src/stories/footer/footer.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1215,6 +1419,16 @@
         "groupedVariables": {
             "src/stories/about-page/about-page.mocks.ts": [
                 {
+                    "name": "AboutPageCardMocks",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/about-page/about-page.mocks.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Card[]",
+                    "defaultValue": "Object.values({\r\n  html: HtmlCardMock,\r\n  scss: ScssCardMock,\r\n  typeScript: TypeScriptCardMock,\r\n  angular: AngularCardMock,\r\n  storyBook: StoryBookCardMock,\r\n  gitHub: GitHubCardMock,\r\n  jest: JestCardMock,\r\n  ngrx: NgrxCardMock,\r\n  rxjs: RxjsCardMock,\r\n})"
+                },
+                {
                     "name": "AngularCardMock",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
@@ -1222,7 +1436,87 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Card",
-                    "defaultValue": "{\r\n  icon_path: '../../assets/storybook.svg',\r\n  alt_text: 'Angular Card Logo',\r\n  title: 'Angular',\r\n  description:\r\n    'Angular is a powerful open-source web application framework for building dynamic, single-page applications with a focus on modular and declarative programming.',\r\n}"
+                    "defaultValue": "{\r\n  icon_path: '../../assets/tech-stack/angular.svg',\r\n  alt_text: 'Angular Card Logo',\r\n  title: 'Angular',\r\n  meta: 'TypeScript-based open-source web application framework',\r\n  description: '',\r\n}"
+                },
+                {
+                    "name": "GitHubCardMock",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/about-page/about-page.mocks.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Card",
+                    "defaultValue": "{\r\n  icon_path: '../../assets/tech-stack/github.svg',\r\n  alt_text: 'GitHub Card Logo',\r\n  title: 'GitHub',\r\n  meta: 'Collaborative Version Control',\r\n  description: '',\r\n}"
+                },
+                {
+                    "name": "HtmlCardMock",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/about-page/about-page.mocks.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Card",
+                    "defaultValue": "{\r\n  icon_path: '../../assets/tech-stack/html.svg',\r\n  alt_text: 'HTML',\r\n  title: 'HTML',\r\n  meta: 'Web Markup Language',\r\n  description: '',\r\n}"
+                },
+                {
+                    "name": "JestCardMock",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/about-page/about-page.mocks.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Card",
+                    "defaultValue": "{\r\n  icon_path: '../../assets/tech-stack/jest.svg',\r\n  alt_text: 'Jest Card Logo',\r\n  title: 'Jest',\r\n  meta: 'JavaScript Testing',\r\n  description: '',\r\n}"
+                },
+                {
+                    "name": "NgrxCardMock",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/about-page/about-page.mocks.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Card",
+                    "defaultValue": "{\r\n  icon_path: '../../assets/tech-stack/ngrx.svg',\r\n  alt_text: 'Ngrx Card Logo',\r\n  title: 'Ngrx',\r\n  meta: 'Angular State Management.',\r\n  description: '',\r\n}"
+                },
+                {
+                    "name": "RxjsCardMock",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/about-page/about-page.mocks.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Card",
+                    "defaultValue": "{\r\n  icon_path: '../../assets/tech-stack/rxjs.svg',\r\n  alt_text: 'Rxjs Card Logo',\r\n  title: 'Rxjs',\r\n  meta: 'Reactive Programming',\r\n  description: '',\r\n}"
+                },
+                {
+                    "name": "ScssCardMock",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/about-page/about-page.mocks.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Card",
+                    "defaultValue": "{\r\n  icon_path: '../../assets/tech-stack/scss.svg',\r\n  alt_text: 'Scss Card Logo',\r\n  title: 'Scss',\r\n  meta: 'Stylesheet Enhancement',\r\n  description: '',\r\n}"
+                },
+                {
+                    "name": "StoryBookCardMock",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/about-page/about-page.mocks.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Card",
+                    "defaultValue": "{\r\n  icon_path: '../../assets/tech-stack/storybook.svg',\r\n  alt_text: 'Storybook Card Logo',\r\n  title: 'Storybook',\r\n  meta: 'Component Development & Documentation.',\r\n  description: '',\r\n}"
+                },
+                {
+                    "name": "TypeScriptCardMock",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/about-page/about-page.mocks.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Card",
+                    "defaultValue": "{\r\n  icon_path: '../../assets/tech-stack/typescript.svg',\r\n  alt_text: 'Typescript Card Logo',\r\n  title: 'Typescript',\r\n  meta: 'Static Typing',\r\n  description: '',\r\n}"
                 }
             ],
             "src/app/app.config.ts": [
@@ -1291,28 +1585,6 @@
                     "defaultValue": "{\r\n  title: 'Portfolio/About-Page',\r\n  component: AboutPageComponent,\r\n  tags: ['autodocs'],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
                 }
             ],
-            "src/stories/footer/footer.stories.ts": [
-                {
-                    "name": "Content",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/footer/footer.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{}"
-                },
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/footer/footer.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<FooterComponent>",
-                    "defaultValue": "{\r\n  title: 'Portfolio/Footer',\r\n  component: FooterComponent,\r\n  tags: ['autodocs'],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
-                }
-            ],
             "src/stories/card/card.stories.ts": [
                 {
                     "name": "Content",
@@ -1333,6 +1605,28 @@
                     "deprecationMessage": "",
                     "type": "Meta<CardComponent>",
                     "defaultValue": "{\r\n  title: 'Portfolio/Card',\r\n  component: CardComponent,\r\n  tags: ['autodocs'],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
+                }
+            ],
+            "src/stories/footer/footer.stories.ts": [
+                {
+                    "name": "Content",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/footer/footer.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/footer/footer.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<FooterComponent>",
+                    "defaultValue": "{\r\n  title: 'Portfolio/Footer',\r\n  component: FooterComponent,\r\n  tags: ['autodocs'],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
                 }
             ],
             "src/stories/header/header.stories.ts": [
@@ -1376,7 +1670,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "SocialMedia",
-                    "defaultValue": "{\r\n  icon_url: 'https://img.icons8.com/fluency/48/github.png',\r\n  href_url: 'https://github.com/kaushal-vani',\r\n  alt_text: 'GitHub',\r\n  description: 'Professional network',\r\n}"
+                    "defaultValue": "{\r\n  icon_url: '../../assets/tech-stack/github.svg',\r\n  href_url: 'https://github.com/kaushal-vani',\r\n  alt_text: 'GitHub',\r\n  description: 'Professional network',\r\n}"
                 },
                 {
                     "name": "LinkedInMocks",
@@ -1386,7 +1680,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "SocialMedia",
-                    "defaultValue": "{\r\n  icon_url: 'https://img.icons8.com/fluency/48/linkedin.png',\r\n  href_url: 'https://www.linkedin.com/in/kaushal-vani/',\r\n  alt_text: 'LinkedIn',\r\n  description: 'Professional network',\r\n}"
+                    "defaultValue": "{\r\n  icon_url: '../../assets/tech-stack/linkedin.svg',\r\n  href_url: 'https://www.linkedin.com/in/kaushal-vani/',\r\n  alt_text: 'LinkedIn',\r\n  description: 'Professional network',\r\n}"
                 },
                 {
                     "name": "LogoMocks",
@@ -1525,19 +1819,6 @@
                     "kind": 183
                 }
             ],
-            "src/stories/footer/footer.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<FooterComponent>",
-                    "file": "src/stories/footer/footer.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
             "src/stories/card/card.stories.ts": [
                 {
                     "name": "Story",
@@ -1545,6 +1826,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<CardComponent>",
                     "file": "src/stories/card/card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "src/stories/footer/footer.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<FooterComponent>",
+                    "file": "src/stories/footer/footer.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -1581,7 +1875,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 2,
+        "count": 1,
         "status": "low",
         "files": [
             {
@@ -1627,7 +1921,97 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
+                "name": "AboutPageCardMocks",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/about-page/about-page.mocks.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
                 "name": "AngularCardMock",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/about-page/about-page.mocks.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "GitHubCardMock",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/about-page/about-page.mocks.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "HtmlCardMock",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/about-page/about-page.mocks.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "JestCardMock",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/about-page/about-page.mocks.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "NgrxCardMock",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/about-page/about-page.mocks.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "RxjsCardMock",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/about-page/about-page.mocks.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ScssCardMock",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/about-page/about-page.mocks.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "StoryBookCardMock",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/about-page/about-page.mocks.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TypeScriptCardMock",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -1636,9 +2020,18 @@
                 "filePath": "src/stories/about-page/about-page.models.ts",
                 "type": "interface",
                 "linktype": "interface",
+                "name": "AboutPageCard",
+                "coveragePercent": 0,
+                "coverageCount": "0/10",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/about-page/about-page.models.ts",
+                "type": "interface",
+                "linktype": "interface",
                 "name": "Card",
                 "coveragePercent": 0,
-                "coverageCount": "0/5",
+                "coverageCount": "0/6",
                 "status": "low"
             },
             {
@@ -1726,7 +2119,7 @@
                 "linktype": "component",
                 "name": "CardComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/5",
+                "coverageCount": "0/6",
                 "status": "low"
             },
             {

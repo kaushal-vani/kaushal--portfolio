@@ -1,0 +1,26 @@
+// .eslintrc.json
+{
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "plugins": ["prettier"],
+  "rules": {
+    // other rules...
+
+    // Set maximum line length to 150 characters
+    "max-len": ["error", { "code": 150 }]
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "extraFileExtensions": [".html"]
+  },
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "parserOptions": {
+        "project": ["./tsconfig.json"]
+      }
+    }
+  ]
+}
